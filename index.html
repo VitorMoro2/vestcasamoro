@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VestCasaMoro — Decoração e Utilidades para o seu Lar</title>
+  <meta name="description" content="Decoração e utilidades cuidadosamente selecionadas que unem beleza, praticidade e sofisticação para transformar sua casa em um espaço único." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            wine: '#6B1F2B',
+            'wine-dark': '#561821',
+            gold: '#D4A943',
+            'gold-dark': '#B8923A',
+            beige: '#F5EFE6',
+            cream: '#FAF8F5',
+            ink: '#1F1F1F',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            soft: '0 10px 40px -12px rgba(31,31,31,0.12)',
+            card: '0 18px 50px -20px rgba(31,31,31,0.25)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%236B1F2B'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%23D4A943' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E" />
+</head>
+
+<body class="bg-cream text-ink font-sans antialiased">
+
+  <!-- Barra de progresso de leitura -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header id="header" class="sticky top-0 z-50 transition-all duration-500">
+    <nav class="max-w-7xl mx-auto px-5 lg:px-8 flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2.5 group">
+        <svg id="logo-icon" viewBox="0 0 48 48" class="w-9 h-9 lg:w-10 lg:h-10 flex-shrink-0 text-wine transition-colors duration-500" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 23 L24 7 L42 23" stroke="currentColor" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/>
+          <rect x="11" y="9" width="4" height="8" fill="currentColor"/>
+          <line x1="11" y1="24" x2="11" y2="39" stroke="currentColor" stroke-width="5" stroke-linecap="square"/>
+          <line x1="37" y1="24" x2="37" y2="39" stroke="currentColor" stroke-width="5" stroke-linecap="square"/>
+          <rect x="20" y="26" width="4" height="4" fill="currentColor"/>
+          <rect x="25" y="26" width="4" height="4" fill="currentColor"/>
+          <rect x="20" y="31" width="4" height="4" fill="currentColor"/>
+          <rect x="25" y="31" width="4" height="4" fill="currentColor"/>
+        </svg>
+        <div class="flex flex-col leading-none">
+          <span id="logo-name" class="font-display text-2xl lg:text-[28px] font-600 text-wine tracking-tight transition-colors duration-500">VestCasaMoro</span>
+          <span id="logo-tagline" class="text-[10px] tracking-[0.35em] uppercase text-gold-dark mt-0.5 transition-colors duration-500">Casa &amp; Decoração</span>
+        </div>
+      </a>
+
+      <!-- Desktop menu -->
+      <ul class="hidden lg:flex items-center gap-9 text-sm font-medium text-ink/80">
+        <li><a href="#" class="nav-link">Início</a></li>
+        <li><a href="#ambientes" class="nav-link">Ambientes</a></li>
+        <li><a href="#sobre" class="nav-link">Sobre Nós</a></li>
+        <li><a href="#newsletter" class="nav-link">Contato</a></li>
+      </ul>
+
+      <!-- Icons -->
+      <div class="flex items-center gap-4 sm:gap-5">
+        <button aria-label="Buscar" class="icon-btn hidden sm:grid">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="w-5 h-5"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5" stroke-linecap="round"/></svg>
+        </button>
+        <!-- Mobile toggle -->
+        <button id="menu-toggle" aria-label="Menu" class="icon-btn lg:hidden">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-6 h-6"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="lg:hidden hidden border-t border-black/5 bg-cream">
+      <ul class="px-5 py-4 space-y-1 text-sm font-medium">
+        <li><a href="#" class="mobile-link">Início</a></li>
+        <li><a href="#ambientes" class="mobile-link">Ambientes</a></li>
+        <li><a href="#sobre" class="mobile-link">Sobre Nós</a></li>
+        <li><a href="#newsletter" class="mobile-link">Contato</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ============ HERO — IMAGEM ESTÁTICA ============ -->
+  <section id="hero" class="hero-section">
+
+    <!-- Foto de fundo -->
+    <img class="hero-bg-image" src="assets/images/hero-bg.jpg" alt="Ambiente decorado VestCasaMoro" />
+
+    <!-- Overlay topo → base -->
+    <div class="hero-overlay"></div>
+
+    <!-- Conteúdo -->
+    <div class="hero-inner">
+
+      <div id="hero-content" class="hero-content-block">
+        <p class="hero-eyebrow">
+          <span class="inline-block w-8 h-px bg-gold mr-3 align-middle"></span>
+          Casa &amp; Decoração
+        </p>
+        <h1 class="hero-title">
+          <em>Elegância</em> para cada<br>ambiente da sua casa.
+        </h1>
+        <p class="hero-desc">
+          Descubra peças que unem beleza, conforto e funcionalidade em cada espaço.
+        </p>
+        <div class="hero-btns">
+          <a href="#ambientes" class="btn-primary">Explorar Coleção
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://wa.me/5567981566712" target="_blank" rel="noopener" class="btn-outline-white">Entrar em Contato</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Indicador de scroll -->
+    <div class="scroll-indicator" id="scroll-indicator">
+      <span class="text-white/50 text-[10px] tracking-widest uppercase">Rolar para explorar</span>
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============ BENEFITS ============ -->
+  <section class="border-y border-black/5 bg-cream">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 sm:grid-cols-2 divide-x-0 sm:divide-x divide-black/5">
+      <div class="benefit reveal justify-center">
+        <div class="benefit-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-6 h-6"><path d="m12 3 2.5 5 5.5.8-4 3.9 1 5.5L12 16l-5 2.6 1-5.5-4-3.9 5.5-.8L12 3Z" stroke-linejoin="round"/></svg>
+        </div>
+        <div><p class="font-semibold text-sm">Produtos selecionados</p><p class="text-xs text-ink/55 mt-0.5">Curadoria de qualidade</p></div>
+      </div>
+      <div class="benefit reveal" style="--delay:.3s">
+        <div class="benefit-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-6 h-6"><path d="M4 12a8 8 0 0 1 16 0v5a2 2 0 0 1-2 2h-1v-6h3M4 12v5a2 2 0 0 0 2 2h1v-6H4" stroke-linejoin="round"/></svg>
+        </div>
+        <div><p class="font-semibold text-sm">Atendimento especializado</p><p class="text-xs text-ink/55 mt-0.5">Suporte dedicado a você</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AMBIENTES ============ -->
+  <section id="ambientes" class="max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28">
+    <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+      <p class="section-eyebrow justify-center">Inspire-se por ambiente</p>
+      <h2 class="font-display text-4xl lg:text-5xl font-600 mt-3">Cada cômodo merece um toque <em>especial.</em></h2>
+      <div class="amb-gold-line"></div>
+    </div>
+
+    <div class="amb-tabs" id="amb-tabs" role="tablist"></div>
+    <div id="amb-panels"></div>
+  </section>
+
+  <!-- ============ SOBRE NÓS ============ -->
+  <section id="sobre" class="max-w-5xl mx-auto px-5 lg:px-8 py-20 lg:py-28">
+    <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+      <p class="section-eyebrow justify-center">Nossa história</p>
+      <h2 class="font-display text-4xl lg:text-5xl font-600 mt-3">Sobre a <em>VestCasaMoro.</em></h2>
+    </div>
+
+    <div class="grid sm:grid-cols-[160px,1fr] gap-8 lg:gap-14 items-center reveal" style="--delay:.1s">
+      <div class="bg-beige rounded-3xl py-10 px-6 text-center">
+        <p class="font-display text-5xl text-wine">2019</p>
+        <p class="text-xs uppercase tracking-widest text-gold-dark mt-2">Desde</p>
+      </div>
+      <p class="text-ink/70 leading-relaxed">
+        A VestCasaMoro nasceu em 2019, idealizada por <strong>Jesus Moro</strong> e <strong>Silvaneide Moro</strong>,
+        com o propósito de transformar casas em verdadeiros lares. Acreditamos que cada detalhe importa — por isso
+        selecionamos com cuidado peças de decoração e utilidades que unem beleza, conforto e funcionalidade ao dia a dia.
+      </p>
+    </div>
+
+    <ul class="grid sm:grid-cols-3 gap-6 mt-12 reveal" style="--delay:.2s">
+      <li class="flex items-start gap-3"><span class="check">✓</span><p class="text-sm text-ink/75"><strong>Curadoria criteriosa</strong> — cada peça é escolhida pensando em estética e durabilidade.</p></li>
+      <li class="flex items-start gap-3"><span class="check">✓</span><p class="text-sm text-ink/75"><strong>Design atemporal</strong> — produtos que acompanham o seu estilo por anos.</p></li>
+      <li class="flex items-start gap-3"><span class="check">✓</span><p class="text-sm text-ink/75"><strong>Atenção aos detalhes</strong> — do primeiro contato à entrega, tudo com cuidado.</p></li>
+    </ul>
+  </section>
+
+  <!-- ============ ANTES & DEPOIS ============ -->
+  <section id="comparativo" class="max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28">
+    <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+      <p class="section-eyebrow justify-center">Nossa essência</p>
+      <h2 class="font-display text-4xl lg:text-5xl font-600 mt-3">Mais do que produtos, <em>criamos ambientes.</em></h2>
+      <p class="text-ink/60 mt-4">Arraste o slider e veja o mesmo espaço antes e depois da curadoria VestCasaMoro.</p>
+    </div>
+
+    <div class="compare-wrap reveal" style="--delay:.1s">
+      <div class="compare" id="compare">
+        <img class="compare-img compare-before" src="assets/images/ambiente-sem-decoracao.png" alt="Ambiente sem decoração" draggable="false" />
+        <img class="compare-img compare-after" src="assets/images/ambiente-com-decoracao.png" alt="Ambiente com decoração" draggable="false" />
+
+        <span class="compare-label compare-label-before" id="compare-label-before">Sem Decoração</span>
+        <span class="compare-label compare-label-after" id="compare-label-after">Com Decoração</span>
+
+        <div class="compare-divider" id="compare-divider"></div>
+
+        <div class="compare-handle" id="compare-handle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 7 4 12l4 5" />
+            <path d="M16 7l4 5-4 5" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTATO ============ -->
+  <section id="newsletter" class="px-5 lg:px-8 pb-20 lg:pb-28">
+    <div class="max-w-6xl mx-auto bg-beige rounded-[2rem] px-6 sm:px-12 lg:px-20 py-16 lg:py-20 text-center relative overflow-hidden reveal">
+      <div class="absolute -top-10 -left-10 w-44 h-44 bg-gold/20 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-12 -right-8 w-56 h-56 bg-wine/10 rounded-full blur-3xl"></div>
+      <div class="relative">
+        <p class="section-eyebrow justify-center">Fale conosco</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-600 mt-3">Entre em contato</h2>
+        <p class="text-ink/60 mt-4 max-w-lg mx-auto">Tire suas dúvidas, faça encomendas ou venha conhecer nossos produtos. Estamos prontos para te atender!</p>
+        <a href="https://wa.me/5567981566712" target="_blank" rel="noopener" class="inline-flex items-center gap-3 mt-9 btn-gold text-base px-8 py-4 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.122 1.529 5.855L0 24l6.335-1.502A11.955 11.955 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.875 9.875 0 0 1-5.031-1.378l-.361-.214-3.741.981.999-3.648-.235-.374A9.867 9.867 0 0 1 2.118 12C2.118 6.534 6.534 2.118 12 2.118c5.465 0 9.882 4.416 9.882 9.882 0 5.465-4.417 9.882-9.882 9.882z"/>
+          </svg>
+          Chamar no WhatsApp
+        </a>
+        <p class="text-ink/40 text-sm mt-4">(67) 98156-6712</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-ink text-cream/80">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 pt-16 pb-10">
+      <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <div>
+          <span class="font-display text-2xl text-cream">VestCasaMoro</span>
+          <p class="text-sm mt-4 leading-relaxed text-cream/60 max-w-xs">Decoração e utilidades que transformam sua casa em um verdadeiro lar, com elegância e funcionalidade.</p>
+          <div class="flex gap-3 mt-6">
+            <a href="#" aria-label="Instagram" class="social"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-4.5 h-4.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="Facebook" class="social"><svg viewBox="0 0 24 24" fill="currentColor" class="w-4.5 h-4.5"><path d="M13 22v-8h2.7l.4-3H13V9.1c0-.9.3-1.5 1.6-1.5H16V5c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9V11H7.3v3H10v8h3Z"/></svg></a>
+            <a href="#" aria-label="Pinterest" class="social"><svg viewBox="0 0 24 24" fill="currentColor" class="w-4.5 h-4.5"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.6 1.3 1.5 0 .9-.6 2.2-.9 3.5-.2 1 .5 1.9 1.6 1.9 1.9 0 3.3-2 3.3-4.9 0-2.6-1.8-4.3-4.4-4.3-3 0-4.8 2.2-4.8 4.6 0 .9.3 1.5.8 2 .1.1.1.2.1.4l-.3 1.1c0 .2-.2.2-.4.1-1.1-.5-1.7-1.9-1.7-3.1 0-2.5 2.1-5.6 6.3-5.6 3.4 0 5.6 2.4 5.6 5 0 3.4-1.9 6-4.7 6-.9 0-1.8-.5-2.1-1.1l-.6 2.2c-.2.8-.7 1.7-1.1 2.3A10 10 0 1 0 12 2Z"/></svg></a>
+            <a href="#" aria-label="WhatsApp" class="social"><svg viewBox="0 0 24 24" fill="currentColor" class="w-4.5 h-4.5"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2Zm5.3 14c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.1-.9-2.6-1.1-4.2-3.8-4.3-4-.1-.2-1-1.3-1-2.5s.6-1.8.9-2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.5c-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.2Z"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Ambientes</h4>
+          <ul class="footer-list">
+            <li><a href="#ambientes">Sala</a></li>
+            <li><a href="#ambientes">Cozinha</a></li>
+            <li><a href="#ambientes">Quarto</a></li>
+            <li><a href="#ambientes">Banheiro</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Institucional</h4>
+          <ul class="footer-list">
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#newsletter">Contato</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-cream/10 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-cream/50">
+        <p>© <span id="year"></span> VestCasaMoro. Todos os direitos reservados.</p>
+        <p>Feito com <span class="text-gold">♥</span> para o seu lar.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

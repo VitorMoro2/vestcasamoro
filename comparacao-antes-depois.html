@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Antes & Depois — Projeto Residencial</title>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #1a1a1a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 20px;
+    font-family: "Iowan Old Style", "Palatino Linotype", Georgia, system-ui, -apple-system, sans-serif;
+  }
+
+  h1 {
+    color: #f1ece4;
+    font-weight: 400;
+    font-size: clamp(22px, 3.2vw, 34px);
+    letter-spacing: 0.02em;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  h1 em { color: #c5a253; font-style: italic; }
+
+  .subtitle {
+    color: rgba(241,236,228,.5);
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  /* ---------- Slider ---------- */
+  .compare {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    aspect-ratio: 1536 / 1024;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px -30px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.06);
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+  }
+  .compare.dragging { cursor: grabbing; }
+
+  .compare img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+  }
+
+  /* imagem base (Sem Decoração) fica embaixo, sempre 100% visível */
+  .img-before { z-index: 1; }
+
+  /* imagem de cima (Com Decoração) é recortada pelo clip-path conforme o slider */
+  .img-after {
+    z-index: 2;
+    clip-path: inset(0 0 0 50%);
+  }
+  .compare.is-settling .img-after { transition: clip-path .5s cubic-bezier(.22,1.4,.36,1); }
+
+  /* ---------- Linha divisória ---------- */
+  .divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    z-index: 3;
+    pointer-events: none;
+    transform: translateX(-50%);
+  }
+  .divider::before {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; left: -1.5px;
+    width: 3px;
+    background: rgba(255,255,255,.92);
+    box-shadow: 0 0 16px 2px rgba(255,255,255,.55), 0 0 2px rgba(0,0,0,.3);
+    backdrop-filter: blur(2px);
+  }
+  .compare.is-settling .divider { transition: left .5s cubic-bezier(.22,1.4,.36,1); }
+
+  /* ---------- Handle ---------- */
+  .handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 52px;
+    height: 52px;
+    margin: -26px 0 0 -26px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.96);
+    box-shadow: 0 10px 30px -8px rgba(0,0,0,.55), 0 0 0 1px rgba(0,0,0,.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    pointer-events: none;
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .compare.dragging .handle {
+    transform: scale(1.08);
+    box-shadow: 0 14px 36px -8px rgba(0,0,0,.6), 0 0 0 1px rgba(0,0,0,.04);
+  }
+  .handle svg { width: 20px; height: 20px; color: #2b2018; }
+
+  @keyframes handlePulse {
+    0%   { box-shadow: 0 10px 30px -8px rgba(0,0,0,.55), 0 0 0 0 rgba(255,255,255,.5); }
+    50%  { box-shadow: 0 10px 30px -8px rgba(0,0,0,.55), 0 0 0 14px rgba(255,255,255,0); }
+    100% { box-shadow: 0 10px 30px -8px rgba(0,0,0,.55), 0 0 0 0 rgba(255,255,255,0); }
+  }
+  .handle.pulse { animation: handlePulse 1.4s ease-out 2; }
+
+  /* ---------- Labels flutuantes ---------- */
+  .label {
+    position: absolute;
+    top: 22px;
+    z-index: 3;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #f1ece4;
+    padding: 9px 16px;
+    border-radius: 999px;
+    background: rgba(20,16,12,.42);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,.14);
+    pointer-events: none;
+    transition: opacity .15s linear;
+  }
+  .label-before { left: 22px; }
+  .label-after  { right: 22px; }
+
+  footer {
+    margin-top: 28px;
+    color: rgba(241,236,228,.35);
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 12px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Antes &amp; Depois — Projeto <em>Residencial</em></h1>
+  <p class="subtitle">Arraste para comparar</p>
+
+  <div class="compare" id="compare">
+    <img class="img-before" src="assets/images/ambiente-sem-decoracao.png" alt="Ambiente sem decoração" draggable="false" />
+    <img class="img-after"  src="assets/images/ambiente-com-decoracao.png" alt="Ambiente com decoração" draggable="false" />
+
+    <span class="label label-before" id="label-before">Sem Decoração</span>
+    <span class="label label-after"  id="label-after">Com Decoração</span>
+
+    <div class="divider" id="divider"></div>
+
+    <div class="handle" id="handle">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 7 4 12l4 5" />
+        <path d="M16 7l4 5-4 5" />
+      </svg>
+    </div>
+  </div>
+
+  <footer>VestCasaMoro · Visualização de ambiente</footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      const compare = document.getElementById("compare");
+      const divider = document.getElementById("divider");
+      const handle  = document.getElementById("handle");
+      const imgAfter = compare.querySelector(".img-after");
+      const labelBefore = document.getElementById("label-before");
+      const labelAfter  = document.getElementById("label-after");
+
+      let dragging = false;
+
+      const setPosition = (pct) => {
+        const clamped = Math.min(100, Math.max(0, pct));
+        imgAfter.style.clipPath = `inset(0 0 0 ${clamped}%)`;
+        divider.style.left = clamped + "%";
+        handle.style.left = clamped + "%";
+
+        /* Fade dos labels conforme o slider passa sobre eles */
+        labelBefore.style.opacity = clamped < 16 ? Math.max(0, clamped / 16) : 1;
+        labelAfter.style.opacity  = clamped > 84 ? Math.max(0, (100 - clamped) / 16) : 1;
+      };
+
+      const pctFromEvent = (clientX) => {
+        const rect = compare.getBoundingClientRect();
+        return ((clientX - rect.left) / rect.width) * 100;
+      };
+
+      const startDrag = (clientX) => {
+        dragging = true;
+        compare.classList.remove("is-settling");
+        compare.classList.add("dragging");
+        handle.classList.remove("pulse");
+        setPosition(pctFromEvent(clientX));
+      };
+
+      const moveDrag = (clientX) => {
+        if (!dragging) return;
+        setPosition(pctFromEvent(clientX));
+      };
+
+      const endDrag = () => {
+        if (!dragging) return;
+        dragging = false;
+        compare.classList.remove("dragging");
+        /* pequena "spring" suave ao soltar, mantendo a posição atual como destino */
+        compare.classList.add("is-settling");
+        setTimeout(() => compare.classList.remove("is-settling"), 520);
+      };
+
+      /* Mouse */
+      compare.addEventListener("mousedown", (e) => { startDrag(e.clientX); e.preventDefault(); });
+      window.addEventListener("mousemove", (e) => moveDrag(e.clientX));
+      window.addEventListener("mouseup", endDrag);
+
+      /* Touch */
+      compare.addEventListener("touchstart", (e) => startDrag(e.touches[0].clientX), { passive: true });
+      window.addEventListener("touchmove", (e) => { if (dragging) moveDrag(e.touches[0].clientX); }, { passive: true });
+      window.addEventListener("touchend", endDrag);
+      window.addEventListener("touchcancel", endDrag);
+
+      /* Estado inicial: centro */
+      setPosition(100);
+
+      /* Pulso único de entrada, disparado quando o slider entra na viewport */
+      const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            handle.classList.add("pulse");
+            obs.disconnect();
+          }
+        });
+      }, { threshold: 0.4 });
+      io.observe(compare);
+    })();
+  </script>
+</body>
+</html>

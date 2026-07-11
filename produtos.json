@@ -1,0 +1,87 @@
+[
+  {
+    "id": "sala",
+    "tab": "Sala",
+    "icon": "🛋️",
+    "nome": "Sala de Estar",
+    "descricao": "Conforto e elegância para o seu espaço favorito",
+    "total": 0,
+    "imagem": "assets/Imagens Ambientes/Sala de estar.jpeg",
+    "produtos": [
+      {
+        "nome": "Caixa Organizadora",
+        "preco": "25,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Melhore_essa_imagem__mas_n_o_202605182128.jpeg"
+      },
+      {
+        "nome": "Caixa Preta",
+        "preco": "R$ 20,00",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/A_tampa_est__azul__preciso_202605182122.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "cozinha",
+    "tab": "Cozinha",
+    "icon": "🍳",
+    "nome": "Cozinha",
+    "descricao": "Praticidade e estilo para o coração da casa",
+    "total": 0,
+    "imagem": "assets/Imagens Ambientes/Cozinha.jpeg",
+    "produtos": [
+      {
+        "nome": "Caminho de mesa",
+        "preco": "R$ 79,99",
+        "tag": "",
+        "foto": "assets/images/produtos/Table_runner_product_high_quality_202607110030.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "quarto",
+    "tab": "Quarto",
+    "icon": "🛏️",
+    "nome": "Quarto",
+    "descricao": "Aconchego e tranquilidade para seu descanso",
+    "total": 0,
+    "imagem": "assets/Imagens Ambientes/Quarto.png",
+    "produtos": []
+  },
+  {
+    "id": "banheiro",
+    "tab": "Banheiro",
+    "icon": "🛁",
+    "nome": "Banheiro",
+    "descricao": "Sofisticação nos detalhes do seu spa particular",
+    "total": 0,
+    "imagem": "assets/Imagens Ambientes/Banheiro.png",
+    "produtos": [
+      {
+        "nome": "Porta Escova",
+        "preco": "R$ 15,00",
+        "tag": "Exclusivo",
+        "foto": "assets/images/produtos/WhatsApp_Image_2026-05-14_at_10.03.05__2_.jpeg"
+      },
+      {
+        "nome": "Porta escova modelo 2 cinza",
+        "preco": "R$ 15,00",
+        "tag": "",
+        "foto": "assets/images/produtos/WhatsApp_Image_2026-05-14_at_10.03.05__1_.jpeg"
+      },
+      {
+        "nome": "Porta escova preto",
+        "preco": "R$ 15,00",
+        "tag": "",
+        "foto": "assets/images/produtos/WhatsApp_Image_2026-05-14_at_10.03.05.jpeg"
+      },
+      {
+        "nome": "Porta escova mod 2 cinza",
+        "preco": "R$ 15,00",
+        "tag": "",
+        "foto": "assets/images/produtos/WhatsApp_Image_2026-05-14_at_10.03.05__3_.jpeg"
+      }
+    ]
+  }
+]
