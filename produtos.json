@@ -13,6 +13,12 @@
         "preco": "25,00",
         "tag": "",
         "foto": "assets/images/produtos/Melhore_essa_imagem__mas_n_o_202605182128.jpeg"
+      },
+      {
+        "nome": "Caixa organizadora",
+        "preco": "R$ 25,99",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/Melhore_essa_imagem__mas_preciso_202605182126.jpeg"
       }
     ]
   },
