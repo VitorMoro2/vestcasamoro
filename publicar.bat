@@ -11,7 +11,7 @@ cd /d "%~dp0"
 
 git add .
 git commit -m "atualizar produtos e imagens"
-git push
+git push origin main
 
 echo.
 echo  =========================================
