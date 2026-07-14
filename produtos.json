@@ -37,6 +37,28 @@
             "foto": "assets/images/produtos/299f913b-ffd5-4830-9c5f-aad3dafef025.jfif"
           }
         ]
+      },
+      {
+        "nome": "Tapete Peludo 2,00x2,40m",
+        "preco": "R$ 288,00",
+        "tag": "Novo",
+        "foto": "assets/images/produtos/Tapete_Sala1.jpeg",
+        "variantes": [
+          {
+            "cor": "Cru",
+            "foto": "assets/images/produtos/Tapete_Sala2.jpeg"
+          },
+          {
+            "cor": "Marron",
+            "foto": "assets/images/produtos/Tapete_Sala3.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Tapete Tianfu 0,60 x 1,95m",
+        "preco": "R$ 145,00",
+        "tag": "Novo",
+        "foto": "assets/images/produtos/Passadeira4.jpeg"
       }
     ]
   },
