@@ -55,10 +55,24 @@
         ]
       },
       {
-        "nome": "Tapete Tianfu 0,60 x 1,95m",
+        "nome": "Tapete Tianfu Antiderrapante 0,60 x 1,95m",
         "preco": "R$ 145,00",
         "tag": "Novo",
-        "foto": "assets/images/produtos/Passadeira4.jpeg"
+        "foto": "assets/images/produtos/Passadeira4.jpeg",
+        "variantes": [
+          {
+            "cor": "Cinza com listras",
+            "foto": "assets/images/produtos/Passadeira1.jpeg"
+          },
+          {
+            "cor": "Geométrico",
+            "foto": "assets/images/produtos/Passadeira2.jpeg"
+          },
+          {
+            "cor": "Geométrico",
+            "foto": "assets/images/produtos/Passadeira3.jpeg"
+          }
+        ]
       }
     ]
   },
