@@ -25,6 +25,18 @@
         "preco": "25,99",
         "tag": "",
         "foto": "assets/images/produtos/Porta_Talheres_Inox.png"
+      },
+      {
+        "nome": "Vaso preto e branco",
+        "preco": "R$ 39,99",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/6018afde-0145-4f8e-9fe1-9f7e29570bcb.jfif",
+        "variantes": [
+          {
+            "cor": "Bege",
+            "foto": "assets/images/produtos/299f913b-ffd5-4830-9c5f-aad3dafef025.jfif"
+          }
+        ]
       }
     ]
   },
