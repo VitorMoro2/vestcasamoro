@@ -449,10 +449,31 @@
 .amb-card-body { padding: 14px; }
 .amb-card-name { font-size: 13px; font-weight: 600; color: var(--amb-text); line-height: 1.4; margin-bottom: 6px; }
 .amb-card-price { font-family: "Playfair Display", serif; font-size: 16px; color: var(--amb-wine); font-weight: 600; }
-.var-btns { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 14px 14px; }
-.var-btn { padding: 4px 10px; border: 1.5px solid rgba(43,32,24,.2); border-radius: 999px; font-size: 11px; font-weight: 600; cursor: pointer; background: transparent; color: var(--amb-text); transition: all .18s; line-height: 1; }
-.var-btn.active { border-color: var(--amb-wine); background: var(--amb-wine); color: white; }
-.var-btn:hover:not(.active) { border-color: var(--amb-wine); color: var(--amb-wine); }
+.var-section { padding: 0 14px 12px; }
+.var-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--amb-text); opacity: .5; margin-bottom: 8px; }
+.var-btns { display: flex; flex-wrap: wrap; gap: 7px; }
+.var-thumb {
+  width: 52px; height: 52px;
+  border-radius: 8px; overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  padding: 2px;
+  background: white;
+  transition: border-color .2s ease, transform .2s ease;
+  flex-shrink: 0;
+  outline: none;
+}
+.var-thumb img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+  transition: transform .2s ease;
+  pointer-events: none;
+}
+.var-thumb:hover { transform: scale(1.07); }
+.var-thumb.active { border-color: #8B5E3C; box-shadow: 0 0 0 1px #8B5E3C; }
+.var-thumb:focus-visible { border-color: #8B5E3C; box-shadow: 0 0 0 3px rgba(139,94,60,.35); }
 
 /* ============================================================
    ANIMAÇÕES DE SCROLL — data-reveal

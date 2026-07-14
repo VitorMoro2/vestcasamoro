@@ -88,21 +88,31 @@
             .map(
               (p, pi) => {
                 const imgId = `vc-img-${a.id}-${pi}`;
-                const varBtns = (p.variantes && p.variantes.length > 0)
-                  ? `<div class="var-btns">
-                      <button class="var-btn active" data-imgid="${imgId}" data-foto="${p.foto || ""}">Padrão</button>
-                      ${p.variantes.map((v) =>
-                        `<button class="var-btn" data-imgid="${imgId}" data-foto="${v.foto || ""}">${v.cor}</button>`
-                      ).join("")}
+                const hasVariants = p.variantes && p.variantes.length > 1;
+                const mainSrc = (p.variantes && p.variantes.length > 0)
+                  ? (p.variantes[0].foto || p.foto || FALLBACK)
+                  : (p.foto || FALLBACK);
+                const varSection = hasVariants
+                  ? `<div class="var-section">
+                      <p class="var-label">Cor</p>
+                      <div class="var-btns" role="group" aria-label="Selecionar variação">
+                        ${p.variantes.map((v, vi) =>
+                          `<button class="var-thumb${vi === 0 ? " active" : ""}"
+                            data-imgid="${imgId}" data-foto="${v.foto || ""}"
+                            aria-selected="${vi === 0}" aria-label="${v.cor}" title="${v.cor}">
+                            <img src="${v.foto || FALLBACK}" alt="${v.cor}" onerror="this.src='${FALLBACK}'" loading="lazy" />
+                          </button>`
+                        ).join("")}
+                      </div>
                     </div>`
                   : "";
                 return `
                 <div class="amb-card">
                   <div class="amb-card-media">
-                    <img id="${imgId}" src="${p.foto || FALLBACK}" alt="${p.nome}" onerror="this.src='${FALLBACK}'" />
+                    <img id="${imgId}" src="${mainSrc}" alt="${p.nome}" onerror="this.src='${FALLBACK}'" />
                     ${p.tag ? `<span class="amb-card-tag">✦ ${p.tag}</span>` : ""}
                   </div>
-                  ${varBtns}
+                  ${varSection}
                   <div class="amb-card-body">
                     <p class="amb-card-name">${p.nome}</p>
                     <p class="amb-card-price">${p.preco}</p>
@@ -122,12 +132,27 @@
     });
 
     ambPanelsEl.addEventListener("click", (ev) => {
-      const btn = ev.target.closest(".var-btn");
+      const btn = ev.target.closest(".var-thumb");
       if (!btn) return;
       const img = document.getElementById(btn.dataset.imgid);
-      if (img) { img.src = btn.dataset.foto || FALLBACK; }
-      btn.closest(".var-btns").querySelectorAll(".var-btn").forEach(b => b.classList.remove("active"));
+      if (img) img.src = btn.dataset.foto || FALLBACK;
+      const group = btn.closest(".var-btns");
+      group.querySelectorAll(".var-thumb").forEach(b => {
+        b.classList.remove("active");
+        b.setAttribute("aria-selected", "false");
+      });
       btn.classList.add("active");
+      btn.setAttribute("aria-selected", "true");
+    });
+
+    ambPanelsEl.addEventListener("keydown", (ev) => {
+      const btn = ev.target.closest(".var-thumb");
+      if (!btn || !["ArrowLeft", "ArrowRight"].includes(ev.key)) return;
+      ev.preventDefault();
+      const thumbs = [...btn.closest(".var-btns").querySelectorAll(".var-thumb")];
+      const idx = thumbs.indexOf(btn);
+      const next = ev.key === "ArrowRight" ? thumbs[idx + 1] : thumbs[idx - 1];
+      if (next) { next.focus(); next.click(); }
     });
 
     const ambSection = document.getElementById("ambientes");
