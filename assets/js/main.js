@@ -86,17 +86,26 @@
         <div class="amb-grid">
           ${a.produtos
             .map(
-              (p) => `
-            <div class="amb-card">
-              <div class="amb-card-media">
-                <img src="${p.foto || FALLBACK}" alt="${p.nome}" onerror="this.src='${FALLBACK}'" />
-                ${p.tag ? `<span class="amb-card-tag">✦ ${p.tag}</span>` : ""}
-              </div>
-              <div class="amb-card-body">
-                <p class="amb-card-name">${p.nome}</p>
-                <p class="amb-card-price">${p.preco}</p>
-              </div>
-            </div>`
+              (p, pi) => {
+                const imgId = `vc-img-${a.id}-${pi}`;
+                const varBtns = (p.variantes && p.variantes.length > 0)
+                  ? `<div class="var-btns">${p.variantes.map((v, vi) =>
+                      `<button class="var-btn${vi === 0 ? " active" : ""}" data-imgid="${imgId}" data-foto="${v.foto || ""}">${v.cor}</button>`
+                    ).join("")}</div>`
+                  : "";
+                return `
+                <div class="amb-card">
+                  <div class="amb-card-media">
+                    <img id="${imgId}" src="${p.foto || FALLBACK}" alt="${p.nome}" onerror="this.src='${FALLBACK}'" />
+                    ${p.tag ? `<span class="amb-card-tag">✦ ${p.tag}</span>` : ""}
+                  </div>
+                  ${varBtns}
+                  <div class="amb-card-body">
+                    <p class="amb-card-name">${p.nome}</p>
+                    <p class="amb-card-price">${p.preco}</p>
+                  </div>
+                </div>`;
+              }
             )
             .join("")}
         </div>
@@ -107,6 +116,15 @@
     ambTabsEl.addEventListener("click", (ev) => {
       const btn = ev.target.closest(".amb-tab");
       if (btn) setActiveAmbTab(btn.dataset.tab);
+    });
+
+    ambPanelsEl.addEventListener("click", (ev) => {
+      const btn = ev.target.closest(".var-btn");
+      if (!btn) return;
+      const img = document.getElementById(btn.dataset.imgid);
+      if (img) { img.src = btn.dataset.foto || FALLBACK; }
+      btn.closest(".var-btns").querySelectorAll(".var-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
     });
 
     const ambSection = document.getElementById("ambientes");

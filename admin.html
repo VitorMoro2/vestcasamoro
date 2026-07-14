@@ -433,6 +433,49 @@
     .toast.show { transform: translateY(0); opacity: 1; }
     .toast.ok  { background: #065F46; }
     .toast.err { background: var(--danger); }
+
+    /* ── Variantes ──────────────────────────────────────────────────────────── */
+    .variants-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
+
+    .variant-item {
+      display: grid;
+      grid-template-columns: 52px 1fr auto;
+      gap: 10px;
+      align-items: center;
+      padding: 10px;
+      background: var(--cream);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    .variant-photo-btn {
+      width: 52px; height: 52px;
+      border-radius: 8px;
+      background: var(--beige);
+      border: 1.5px dashed var(--border);
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      transition: border-color .2s;
+      flex-shrink: 0;
+    }
+    .variant-photo-btn:hover { border-color: var(--wine); }
+    .variant-photo-btn img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+
+    .btn-add-variant {
+      width: 100%;
+      padding: 10px;
+      background: transparent;
+      border: 1.5px dashed var(--border);
+      border-radius: 10px;
+      font-size: 13px;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .btn-add-variant:hover { border-color: var(--wine); color: var(--wine); }
   </style>
 </head>
 <body>
@@ -505,6 +548,13 @@
       </select>
     </div>
 
+    <div class="form-group">
+      <label class="form-label">Cores / Variantes <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:11px">(opcional)</span></label>
+      <div class="variants-list" id="variants-list"></div>
+      <button type="button" class="btn-add-variant" id="btn-add-variant">+ Adicionar cor</button>
+      <input type="file" id="variant-file-input" accept="image/*" style="display:none" />
+    </div>
+
     <div class="modal-actions">
       <button class="btn-cancel" id="btn-cancel">Cancelar</button>
       <button class="btn-confirm" id="btn-confirm">Salvar produto</button>
@@ -519,10 +569,12 @@
   const PASSWORD = "jslkv";
 
   // ── State ──────────────────────────────────────────────────────────────────
-  let data        = [];
-  let activeTab   = 0;
-  let editingIdx  = null;   // null = novo, number = editar
-  let pendingPhoto = null;  // { filename, dataUrl }
+  let data             = [];
+  let activeTab        = 0;
+  let editingIdx       = null;   // null = novo, number = editar
+  let pendingPhoto     = null;   // { filename, dataUrl }
+  let modalVariants    = [];     // { cor, foto, _pending: {filename,dataUrl}|null }
+  let pendingVariantIdx = null;
 
   // ── Elements ───────────────────────────────────────────────────────────────
   const $ = id => document.getElementById(id);
@@ -541,6 +593,51 @@
   const inpTag      = $("inp-tag");
   const btnConfirm  = $("btn-confirm");
   const toast       = $("toast");
+
+  // ── Variantes ──────────────────────────────────────────────────────────────
+  function renderVariants() {
+    const list = document.getElementById("variants-list");
+    if (modalVariants.length === 0) { list.innerHTML = ""; return; }
+    list.innerHTML = modalVariants.map((v, vi) => {
+      const src = v._pending ? v._pending.dataUrl : (v.foto || "");
+      const photoContent = src ? `<img src="${src}" alt="" />` : "📷";
+      return `
+        <div class="variant-item">
+          <button type="button" class="variant-photo-btn" onclick="triggerVariantPhoto(${vi})" title="Trocar foto">${photoContent}</button>
+          <input class="form-input" type="text" placeholder="Nome da cor (ex: Preto)" value="${v.cor}"
+            oninput="modalVariants[${vi}].cor=this.value" style="margin:0" />
+          <button type="button" class="btn-del" onclick="removeVariant(${vi})">🗑</button>
+        </div>`;
+    }).join("");
+  }
+
+  function triggerVariantPhoto(vi) {
+    pendingVariantIdx = vi;
+    document.getElementById("variant-file-input").click();
+  }
+
+  function removeVariant(vi) {
+    modalVariants.splice(vi, 1);
+    renderVariants();
+  }
+
+  document.getElementById("btn-add-variant").addEventListener("click", () => {
+    modalVariants.push({ cor: "", foto: "", _pending: null });
+    renderVariants();
+  });
+
+  document.getElementById("variant-file-input").addEventListener("change", function () {
+    const file = this.files[0];
+    if (!file || pendingVariantIdx === null) return;
+    if (file.size > 5 * 1024 * 1024) { showToast("Imagem muito grande. Máximo 5 MB.", "err"); return; }
+    const reader = new FileReader();
+    reader.onload = e => {
+      modalVariants[pendingVariantIdx]._pending = { filename: file.name, dataUrl: e.target.result };
+      renderVariants();
+    };
+    reader.readAsDataURL(file);
+    this.value = "";
+  });
 
   // ── Login ──────────────────────────────────────────────────────────────────
   function doLogin() {
@@ -673,6 +770,7 @@
       inpNome.value  = "";
       inpPreco.value = "";
       inpTag.value   = "";
+      modalVariants  = [];
     } else {
       const p = data[activeTab].produtos[idx];
       $("modal-title").textContent = "Editar produto";
@@ -683,7 +781,9 @@
         photoPreview.src = p.foto;
         photoPreview.classList.add("show");
       }
+      modalVariants = (p.variantes || []).map(v => ({ ...v, _pending: null }));
     }
+    renderVariants();
 
     modal.classList.add("open");
     setTimeout(() => inpNome.focus(), 50);
@@ -723,10 +823,10 @@
 
     let foto = editingIdx !== null ? (data[activeTab].produtos[editingIdx].foto || "") : "";
 
-    if (pendingPhoto) {
-      try {
-        btnConfirm.disabled    = true;
-        btnConfirm.textContent = "Enviando foto…";
+    btnConfirm.disabled    = true;
+    btnConfirm.textContent = "Salvando…";
+    try {
+      if (pendingPhoto) {
         const res    = await fetch("/api/upload", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -735,24 +835,42 @@
         const result = await res.json();
         if (!res.ok) throw new Error(result.error);
         foto = result.path;
-      } catch (e) {
-        showToast("Erro ao enviar foto: " + e.message, "err");
-        return;
-      } finally {
-        btnConfirm.disabled    = false;
-        btnConfirm.textContent = "Salvar produto";
       }
-    }
 
-    const produto = { nome, preco, tag: inpTag.value, foto };
-    if (editingIdx === null) {
-      data[activeTab].produtos.push(produto);
-    } else {
-      data[activeTab].produtos[editingIdx] = produto;
-    }
+      const finalVariants = [];
+      for (const v of modalVariants) {
+        if (!v.cor) continue;
+        let varFoto = v.foto || "";
+        if (v._pending) {
+          const res    = await fetch("/api/upload", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ filename: v._pending.filename, data: v._pending.dataUrl }),
+          });
+          const result = await res.json();
+          if (!res.ok) throw new Error(result.error);
+          varFoto = result.path;
+        }
+        finalVariants.push({ cor: v.cor, foto: varFoto });
+      }
 
-    closeModal();
-    renderProducts();
+      const produto = { nome, preco, tag: inpTag.value, foto };
+      if (finalVariants.length > 0) produto.variantes = finalVariants;
+
+      if (editingIdx === null) {
+        data[activeTab].produtos.push(produto);
+      } else {
+        data[activeTab].produtos[editingIdx] = produto;
+      }
+
+      closeModal();
+      renderProducts();
+    } catch (e) {
+      showToast("Erro ao enviar foto: " + e.message, "err");
+    } finally {
+      btnConfirm.disabled    = false;
+      btnConfirm.textContent = "Salvar produto";
+    }
   });
 
   // ── Save all ───────────────────────────────────────────────────────────────
