@@ -449,7 +449,7 @@
 .amb-card-body { padding: 14px; }
 .amb-card-name { font-size: 13px; font-weight: 600; color: var(--amb-text); line-height: 1.4; margin-bottom: 6px; }
 .amb-card-price { font-family: "Playfair Display", serif; font-size: 16px; color: var(--amb-wine); font-weight: 600; }
-.var-section { padding: 0 16px 18px; }
+.var-section { padding: 10px 16px 18px; }
 .var-meta { font-size: 11px; color: rgba(43,32,24,.48); margin-bottom: 11px; line-height: 1; }
 .var-color-name { font-weight: 700; color: var(--amb-text); transition: opacity .15s; }
 .var-btns { display: flex; flex-wrap: wrap; gap: 9px; }
