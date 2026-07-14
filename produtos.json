@@ -9,31 +9,31 @@
     "imagem": "assets/Imagens Ambientes/Sala de estar.jpeg",
     "produtos": [
       {
-        "nome": "Caixa Organizadora",
-        "preco": "10,00",
+        "nome": "Caixa Organizadora Fita Cinza - 29L - 45 X 33 X 25 CM",
+        "preco": "R$ 69,90",
         "tag": "",
         "foto": "assets/images/produtos/Melhore_essa_imagem__mas_n_o_202605182128.jpeg"
       },
       {
-        "nome": "Caixa organizadora",
-        "preco": "R$ 25,99",
+        "nome": "Caixa Organizadora Telado Label Madeira 20L - 40 X 30 X 26,2 CM",
+        "preco": "R$ 49,90",
         "tag": "Mais vendido",
         "foto": "assets/images/produtos/Melhore_essa_imagem__mas_preciso_202605182126.jpeg"
       },
       {
-        "nome": "Porta Talher",
-        "preco": "25,99",
+        "nome": "Porta Talheres - Preto",
+        "preco": "R$ 51,90",
         "tag": "",
-        "foto": "assets/images/produtos/Porta_Talheres_Inox.png"
+        "foto": "assets/images/produtos/Porta_Talheres_Preto.png"
       },
       {
         "nome": "Vaso preto e branco",
-        "preco": "R$ 39,99",
+        "preco": "R$ 49,90",
         "tag": "Mais vendido",
         "foto": "assets/images/produtos/6018afde-0145-4f8e-9fe1-9f7e29570bcb.jfif",
         "variantes": [
           {
-            "cor": "Bege",
+            "cor": "Branco",
             "foto": "assets/images/produtos/299f913b-ffd5-4830-9c5f-aad3dafef025.jfif"
           }
         ]
@@ -50,10 +50,22 @@
     "imagem": "assets/Imagens Ambientes/Cozinha.jpeg",
     "produtos": [
       {
-        "nome": "Caminho de mesa",
-        "preco": "R$ 79,99",
+        "nome": "Caminho de Mesa Rami 1,45m",
+        "preco": "R$ 99,00",
         "tag": "",
-        "foto": "assets/images/produtos/Table_runner_product_high_quality_202607110030.jpeg"
+        "foto": "assets/images/produtos/Caminho_de_mesa_rami_1.jpeg",
+        "variantes": [
+          {
+            "cor": "Verde",
+            "foto": "assets/images/produtos/Caminho_de_mesa_rami_2.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Caminho de Mesa Acacia 40cmx1,40m",
+        "preco": "R$ 88,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Caminho_de_mesa_acacia_1.jpeg"
       }
     ]
   },
@@ -68,7 +80,7 @@
     "produtos": [
       {
         "nome": "Lençol Malha Casal 3 pçs.",
-        "preco": "99",
+        "preco": "R$ 99,00",
         "tag": "",
         "foto": "assets/images/produtos/Len_ol_liso_Rosa.jpeg",
         "variantes": [
@@ -98,26 +110,26 @@
     "imagem": "assets/Imagens Ambientes/Banheiro.png",
     "produtos": [
       {
-        "nome": "Porta Escova",
-        "preco": "R$ 15,00",
+        "nome": "Kit Banheiro 3 Peças em Porcelana FWB-Preto",
+        "preco": "R$ 87,00",
         "tag": "Exclusivo",
         "foto": "assets/images/produtos/WhatsApp_Image_2026-05-14_at_10.03.05__2_.jpeg"
       },
       {
-        "nome": "Porta escova modelo 2 cinza",
-        "preco": "R$ 15,00",
+        "nome": "Kit Banheiro C/ Tampa Bambu 3 Peças em Plástico Amigold",
+        "preco": "R$ 66,00",
         "tag": "",
         "foto": "assets/images/produtos/WhatsApp_Image_2026-05-14_at_10.03.05__1_.jpeg"
       },
       {
-        "nome": "Porta escova preto",
-        "preco": "R$ 15,00",
+        "nome": "Kit Banheiro 4pçs Preto com Bandeija",
+        "preco": "R$ 117,00",
         "tag": "",
         "foto": "assets/images/produtos/WhatsApp_Image_2026-05-14_at_10.03.05.jpeg"
       },
       {
-        "nome": "Porta escova mod 2 cinza",
-        "preco": "R$ 15,00",
+        "nome": "Kit Banheiro C/ Suporte 4 Peças em Plástico Flashgoods",
+        "preco": "R$ 69,80",
         "tag": "",
         "foto": "assets/images/produtos/WhatsApp_Image_2026-05-14_at_10.03.05__3_.jpeg"
       }
