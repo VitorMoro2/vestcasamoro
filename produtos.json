@@ -65,7 +65,28 @@
     "descricao": "Aconchego e tranquilidade para seu descanso",
     "total": 0,
     "imagem": "assets/Imagens Ambientes/Quarto.png",
-    "produtos": []
+    "produtos": [
+      {
+        "nome": "Lençol Malha Casal 3 pçs.",
+        "preco": "99",
+        "tag": "",
+        "foto": "assets/images/produtos/Len_ol_liso_Rosa.jpeg",
+        "variantes": [
+          {
+            "cor": "Azul",
+            "foto": "assets/images/produtos/Len_ol_liso_Azul.jpeg"
+          },
+          {
+            "cor": "Cinza",
+            "foto": "assets/images/produtos/Len_ol_liso_Cinza.jpeg"
+          },
+          {
+            "cor": "Rosa",
+            "foto": "assets/images/produtos/Len_ol_liso_Rosa.jpeg"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "banheiro",

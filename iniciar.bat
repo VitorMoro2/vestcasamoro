@@ -19,6 +19,27 @@ if %errorlevel% neq 0 (
     exit /b
 )
 
+echo.
+echo Atualizando projeto...
+git pull
+
+if %errorlevel% neq 0 (
+    echo.
+    echo ERRO ao atualizar o projeto!
+    pause
+    exit /b
+)
+
+:: Instala dependencias (caso existam novas)
+if exist package.json (
+    echo.
+    echo Verificando dependencias...
+    call npm install
+)
+
+echo.
+echo Iniciando servidor...
+
 :: Inicia o servidor em segundo plano
 start "VestCasaMoro Servidor" /min node "%~dp0server.js"
 
