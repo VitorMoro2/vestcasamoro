@@ -92,7 +92,7 @@
                 const mainSrc = p.foto || FALLBACK;
                 const varSection = hasVariants
                   ? `<div class="var-section">
-                      <p class="var-label">Cor</p>
+                      <p class="var-meta">Cor: <strong class="var-color-name" id="vcn-${imgId}">Padrão</strong></p>
                       <div class="var-btns" role="group" aria-label="Selecionar variação">
                         <button class="var-thumb active"
                           data-imgid="${imgId}" data-foto="${p.foto || ""}"
@@ -137,8 +137,18 @@
     ambPanelsEl.addEventListener("click", (ev) => {
       const btn = ev.target.closest(".var-thumb");
       if (!btn) return;
+
+      // Fade out → swap src → fade in
       const img = document.getElementById(btn.dataset.imgid);
-      if (img) img.src = btn.dataset.foto || FALLBACK;
+      if (img) {
+        img.style.opacity = "0";
+        setTimeout(() => {
+          img.src = btn.dataset.foto || FALLBACK;
+          img.style.opacity = "1";
+        }, 180);
+      }
+
+      // Atualiza estado ativo
       const group = btn.closest(".var-btns");
       group.querySelectorAll(".var-thumb").forEach(b => {
         b.classList.remove("active");
@@ -146,6 +156,10 @@
       });
       btn.classList.add("active");
       btn.setAttribute("aria-selected", "true");
+
+      // Atualiza nome da cor exibido
+      const label = document.getElementById("vcn-" + btn.dataset.imgid);
+      if (label) label.textContent = btn.getAttribute("title");
     });
 
     ambPanelsEl.addEventListener("keydown", (ev) => {

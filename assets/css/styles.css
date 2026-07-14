@@ -441,7 +441,7 @@
 .amb-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -22px rgba(43,32,24,.3); }
 .amb-card.visible:hover { transform: translateY(-4px); }
 .amb-card-media { position: relative; aspect-ratio: 1/1; background: var(--amb-bg-mid); overflow: hidden; }
-.amb-card-media img { width: 100%; height: 100%; object-fit: cover; }
+.amb-card-media img { width: 100%; height: 100%; object-fit: cover; transition: opacity .2s ease; }
 .amb-card-tag {
   position: absolute; top: 10px; left: 10px; font-size: 10px; font-weight: 700; letter-spacing: .03em;
   color: var(--amb-gold); background: rgba(251,247,240,.92); padding: 4px 9px; border-radius: 999px;
@@ -449,31 +449,29 @@
 .amb-card-body { padding: 14px; }
 .amb-card-name { font-size: 13px; font-weight: 600; color: var(--amb-text); line-height: 1.4; margin-bottom: 6px; }
 .amb-card-price { font-family: "Playfair Display", serif; font-size: 16px; color: var(--amb-wine); font-weight: 600; }
-.var-section { padding: 0 14px 12px; }
-.var-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--amb-text); opacity: .5; margin-bottom: 8px; }
-.var-btns { display: flex; flex-wrap: wrap; gap: 7px; }
+.var-section { padding: 0 16px 18px; }
+.var-meta { font-size: 11px; color: rgba(43,32,24,.48); margin-bottom: 11px; line-height: 1; }
+.var-color-name { font-weight: 700; color: var(--amb-text); transition: opacity .15s; }
+.var-btns { display: flex; flex-wrap: wrap; gap: 9px; }
 .var-thumb {
-  width: 52px; height: 52px;
-  border-radius: 8px; overflow: hidden;
+  width: 58px; height: 58px;
+  border-radius: 9px; overflow: hidden;
   cursor: pointer;
   border: 2px solid transparent;
-  padding: 2px;
-  background: white;
-  transition: border-color .2s ease, transform .2s ease;
+  background: var(--amb-bg-mid);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .15s ease;
   flex-shrink: 0;
   outline: none;
 }
 .var-thumb img {
   width: 100%; height: 100%;
   object-fit: cover;
-  border-radius: 5px;
   display: block;
-  transition: transform .2s ease;
   pointer-events: none;
 }
-.var-thumb:hover { transform: scale(1.07); }
-.var-thumb.active { border-color: #8B5E3C; box-shadow: 0 0 0 1px #8B5E3C; }
-.var-thumb:focus-visible { border-color: #8B5E3C; box-shadow: 0 0 0 3px rgba(139,94,60,.35); }
+.var-thumb:hover:not(.active) { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0,0,0,.13); }
+.var-thumb.active { border-color: #fff; box-shadow: 0 0 0 2px #8B5E3C, 0 4px 12px rgba(0,0,0,.12); }
+.var-thumb:focus-visible { border-color: #fff; box-shadow: 0 0 0 2px #8B5E3C, 0 0 0 4px rgba(139,94,60,.25); }
 
 /* ============================================================
    ANIMAÇÕES DE SCROLL — data-reveal
