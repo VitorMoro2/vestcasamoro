@@ -19,6 +19,12 @@
         "preco": "R$ 25,99",
         "tag": "Mais vendido",
         "foto": "assets/images/produtos/Melhore_essa_imagem__mas_preciso_202605182126.jpeg"
+      },
+      {
+        "nome": "Porta Talher",
+        "preco": "25,99",
+        "tag": "",
+        "foto": "assets/images/produtos/Porta_Talheres_Inox.png"
       }
     ]
   },
