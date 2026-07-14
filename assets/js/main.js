@@ -88,18 +88,21 @@
             .map(
               (p, pi) => {
                 const imgId = `vc-img-${a.id}-${pi}`;
-                const hasVariants = p.variantes && p.variantes.length > 1;
-                const mainSrc = (p.variantes && p.variantes.length > 0)
-                  ? (p.variantes[0].foto || p.foto || FALLBACK)
-                  : (p.foto || FALLBACK);
+                const hasVariants = p.variantes && p.variantes.length > 0;
+                const mainSrc = p.foto || FALLBACK;
                 const varSection = hasVariants
                   ? `<div class="var-section">
                       <p class="var-label">Cor</p>
                       <div class="var-btns" role="group" aria-label="Selecionar variação">
-                        ${p.variantes.map((v, vi) =>
-                          `<button class="var-thumb${vi === 0 ? " active" : ""}"
+                        <button class="var-thumb active"
+                          data-imgid="${imgId}" data-foto="${p.foto || ""}"
+                          aria-selected="true" aria-label="Padrão" title="Padrão">
+                          <img src="${p.foto || FALLBACK}" alt="Padrão" onerror="this.src='${FALLBACK}'" loading="lazy" />
+                        </button>
+                        ${p.variantes.map((v) =>
+                          `<button class="var-thumb"
                             data-imgid="${imgId}" data-foto="${v.foto || ""}"
-                            aria-selected="${vi === 0}" aria-label="${v.cor}" title="${v.cor}">
+                            aria-selected="false" aria-label="${v.cor}" title="${v.cor}">
                             <img src="${v.foto || FALLBACK}" alt="${v.cor}" onerror="this.src='${FALLBACK}'" loading="lazy" />
                           </button>`
                         ).join("")}
