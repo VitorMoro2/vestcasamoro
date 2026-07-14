@@ -89,9 +89,12 @@
               (p, pi) => {
                 const imgId = `vc-img-${a.id}-${pi}`;
                 const varBtns = (p.variantes && p.variantes.length > 0)
-                  ? `<div class="var-btns">${p.variantes.map((v, vi) =>
-                      `<button class="var-btn${vi === 0 ? " active" : ""}" data-imgid="${imgId}" data-foto="${v.foto || ""}">${v.cor}</button>`
-                    ).join("")}</div>`
+                  ? `<div class="var-btns">
+                      <button class="var-btn active" data-imgid="${imgId}" data-foto="${p.foto || ""}">Padrão</button>
+                      ${p.variantes.map((v) =>
+                        `<button class="var-btn" data-imgid="${imgId}" data-foto="${v.foto || ""}">${v.cor}</button>`
+                      ).join("")}
+                    </div>`
                   : "";
                 return `
                 <div class="amb-card">
