@@ -9,12 +9,6 @@
     "imagem": "assets/Imagens Ambientes/Sala de estar.jpeg",
     "produtos": [
       {
-        "nome": "Caixa Organizadora Fita Cinza - 29L - 45 X 33 X 25 CM",
-        "preco": "R$ 69,90",
-        "tag": "",
-        "foto": "assets/images/produtos/Melhore_essa_imagem__mas_n_o_202605182128.jpeg"
-      },
-      {
         "nome": "Caixa Organizadora Telado Label Madeira 20L - 40 X 30 X 26,2 CM",
         "preco": "R$ 49,90",
         "tag": "Mais vendido",
@@ -168,6 +162,12 @@
         "preco": "R$ 69,80",
         "tag": "",
         "foto": "assets/images/produtos/WhatsApp_Image_2026-05-14_at_10.03.05__3_.jpeg"
+      },
+      {
+        "nome": "Caixa Organizadora Fita Cinza - 29L - 45 X 33 X 25 CM",
+        "preco": "R$ 69,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Melhore_essa_imagem__mas_n_o_202605182128.jpeg"
       }
     ]
   }
