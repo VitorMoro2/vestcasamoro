@@ -297,6 +297,19 @@
     }
     .btn-del:hover { background: #FECACA; }
 
+    .btn-move {
+      padding: 7px 10px;
+      background: var(--beige);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 13px;
+      cursor: pointer;
+      color: var(--muted);
+      transition: background .2s;
+      outline: none;
+    }
+    .btn-move:hover { background: var(--border); color: var(--ink); }
+
     .empty {
       text-align: center;
       padding: 60px 20px;
@@ -735,6 +748,11 @@
           </div>
           <div class="prod-actions">
             <button class="btn-edit" data-i="${i}">✏️ Editar</button>
+            <select class="btn-move" data-i="${i}">
+              <option value="">Mover →</option>
+              ${data.map((a, ti) => ti === activeTab ? "" :
+                `<option value="${ti}">${a.icon} ${a.tab}</option>`).join("")}
+            </select>
             <button class="btn-del"  data-i="${i}">🗑</button>
           </div>
         </div>`;
@@ -745,6 +763,16 @@
     );
     prodList.querySelectorAll(".btn-del").forEach(b =>
       b.addEventListener("click", () => deleteProd(+b.dataset.i))
+    );
+    prodList.querySelectorAll(".btn-move").forEach(sel =>
+      sel.addEventListener("change", () => {
+        const targetIdx = +sel.value;
+        if (sel.value === "") return;
+        const produto = data[activeTab].produtos.splice(+sel.dataset.i, 1)[0];
+        data[targetIdx].produtos.push(produto);
+        showToast(`Movido para ${data[targetIdx].icon} ${data[targetIdx].tab}`, "ok");
+        renderProducts();
+      })
     );
   }
 
