@@ -67,6 +67,12 @@
             "foto": "assets/images/produtos/Passadeira3.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Caixa Organizadora Fita Cinza - 29L - 45 X 33 X 25 CM",
+        "preco": "R$ 69,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Melhore_essa_imagem__mas_n_o_202605182128.jpeg"
       }
     ]
   },
@@ -162,12 +168,6 @@
         "preco": "R$ 69,80",
         "tag": "",
         "foto": "assets/images/produtos/WhatsApp_Image_2026-05-14_at_10.03.05__3_.jpeg"
-      },
-      {
-        "nome": "Caixa Organizadora Fita Cinza - 29L - 45 X 33 X 25 CM",
-        "preco": "R$ 69,90",
-        "tag": "",
-        "foto": "assets/images/produtos/Melhore_essa_imagem__mas_n_o_202605182128.jpeg"
       }
     ]
   }
