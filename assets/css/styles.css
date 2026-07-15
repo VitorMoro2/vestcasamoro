@@ -230,7 +230,7 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.55) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0.62) 100%);
 }
 
 .hero-inner {
@@ -294,7 +294,12 @@
   opacity: 0;
   animation: heroUp .9s ease .5s forwards;
 }
-.hero-title em { color: #D4A943; font-style: italic; }
+.hero-title em {
+  color: #D4AF37;
+  font-style: italic;
+  font-size: 1.08em;
+  text-shadow: 0 2px 6px rgba(0,0,0,.35);
+}
 
 .hero-desc {
   font-size: 1.0625rem;
