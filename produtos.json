@@ -85,6 +85,18 @@
         "preco": "R$ 369,00",
         "tag": "Novo",
         "foto": "assets/images/produtos/Tapete_Dunai1.jpeg"
+      },
+      {
+        "nome": "Tapete Tear Xadrez 1,50x2,00m",
+        "preco": "R$ 199,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Tapete_tear1.jpeg"
+      },
+      {
+        "nome": "Tapete Dupla Face 2,00x2,50m",
+        "preco": "R$ 459,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Tapete_dupla_face1.jpeg"
       }
     ]
   },
@@ -200,6 +212,12 @@
         "preco": "R$ 51,90",
         "tag": "",
         "foto": "assets/images/produtos/Porta_Talheres_Preto.png"
+      },
+      {
+        "nome": "Tapete Carrara 3 peças",
+        "preco": "R$ 175,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Tapete_dubai2.jpeg"
       }
     ]
   },
@@ -249,6 +267,26 @@
           {
             "cor": "Rosa Coração",
             "foto": "assets/images/produtos/Len_ol_malha4.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Tapete Passadeira 0,60x1,90m",
+        "preco": "R$ 99,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Passadeira8.jpeg",
+        "variantes": [
+          {
+            "cor": "Cinza",
+            "foto": "assets/images/produtos/Passadeira7.jpeg"
+          },
+          {
+            "cor": "Marron",
+            "foto": "assets/images/produtos/Passadeira5.jpeg"
+          },
+          {
+            "cor": "Caramelo",
+            "foto": "assets/images/produtos/Passadeira6.jpeg"
           }
         ]
       }
