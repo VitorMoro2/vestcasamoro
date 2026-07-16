@@ -102,6 +102,86 @@
         "preco": "R$ 88,00",
         "tag": "",
         "foto": "assets/images/produtos/Caminho_de_mesa_acacia_1.jpeg"
+      },
+      {
+        "nome": "Toalha de Mesa Linhão 1,40 x 1,40m",
+        "preco": "R$ 35,50",
+        "tag": "",
+        "foto": "assets/images/produtos/Toalha_de_mesa_linhao5.jpeg",
+        "variantes": [
+          {
+            "cor": "991",
+            "foto": "assets/images/produtos/Toalha_de_mesa_linhao6.jpeg"
+          },
+          {
+            "cor": "992",
+            "foto": "assets/images/produtos/Toalha_de_mesa_linhao4.jpeg"
+          },
+          {
+            "cor": "993",
+            "foto": "assets/images/produtos/Toalha_de_mesa_linhao3.jpeg"
+          },
+          {
+            "cor": "994",
+            "foto": "assets/images/produtos/Toalha_de_mesa_linhao2.jpeg"
+          },
+          {
+            "cor": "995",
+            "foto": "assets/images/produtos/Toalha_de_mesa_linhao1.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Toalha de Mesa Linhão 2,10 x 1,40m",
+        "preco": "R$ 54,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Toalha_de_mesa_linhao6.jpeg",
+        "variantes": [
+          {
+            "cor": "992",
+            "foto": "assets/images/produtos/Toalha_de_mesa_linhao4.jpeg"
+          },
+          {
+            "cor": "993",
+            "foto": "assets/images/produtos/Toalha_de_mesa_linhao3.jpeg"
+          },
+          {
+            "cor": "994",
+            "foto": "assets/images/produtos/Toalha_de_mesa_linhao2.jpeg"
+          },
+          {
+            "cor": "995",
+            "foto": "assets/images/produtos/Toalha_de_mesa_linhao1.jpeg"
+          },
+          {
+            "cor": "996",
+            "foto": "assets/images/produtos/Toalha_de_mesa_linhao5.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Toalha de Mesa Linhão 2,40 x 1,40m",
+        "preco": "R$ 64,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Toalha_de_mesa_linhao7.jpeg",
+        "variantes": [
+          {
+            "cor": "992",
+            "foto": "assets/images/produtos/Toalha_de_mesa_linhao4.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Toalha de Mesa Linhão 2,90 x 1,40m",
+        "preco": "R$ 75,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Toalha_de_mesa_linhao7.jpeg",
+        "variantes": [
+          {
+            "cor": "992",
+            "foto": "assets/images/produtos/Toalha_de_mesa_linhao4.jpeg"
+          }
+        ]
       }
     ]
   },
