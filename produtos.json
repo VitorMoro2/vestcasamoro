@@ -15,12 +15,6 @@
         "foto": "assets/images/produtos/Melhore_essa_imagem__mas_preciso_202605182126.jpeg"
       },
       {
-        "nome": "Porta Talheres - Preto",
-        "preco": "R$ 51,90",
-        "tag": "",
-        "foto": "assets/images/produtos/Porta_Talheres_Preto.png"
-      },
-      {
         "nome": "Vaso preto e branco",
         "preco": "R$ 49,90",
         "tag": "Mais vendido",
@@ -73,6 +67,24 @@
         "preco": "R$ 69,90",
         "tag": "",
         "foto": "assets/images/produtos/Melhore_essa_imagem__mas_n_o_202605182128.jpeg"
+      },
+      {
+        "nome": "Tapete Listra 1,50x2,00m",
+        "preco": "R$ 335,00",
+        "tag": "Novo",
+        "foto": "assets/images/produtos/Tapete_Listra1.jpeg"
+      },
+      {
+        "nome": "Tapete Capri 1,50x2,00m",
+        "preco": "R$ 369,00",
+        "tag": "Exclusivo",
+        "foto": "assets/images/produtos/Tapete_Capre1.jpeg"
+      },
+      {
+        "nome": "Tapete Dubai 1,50x2,00m",
+        "preco": "R$ 369,00",
+        "tag": "Novo",
+        "foto": "assets/images/produtos/Tapete_Dunai1.jpeg"
       }
     ]
   },
@@ -182,6 +194,12 @@
             "foto": "assets/images/produtos/Toalha_de_mesa_linhao4.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Porta Talheres - Preto",
+        "preco": "R$ 51,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Porta_Talheres_Preto.png"
       }
     ]
   },
@@ -211,6 +229,26 @@
           {
             "cor": "Rosa",
             "foto": "assets/images/produtos/Len_ol_liso_Rosa.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Lençol Malha Queen 3 pçs",
+        "preco": "R$ 119,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Len_ol_malha3.jpeg",
+        "variantes": [
+          {
+            "cor": "Amarelo",
+            "foto": "assets/images/produtos/Len_ol_malha1.jpeg"
+          },
+          {
+            "cor": "Rosa Flor",
+            "foto": "assets/images/produtos/Len_ol_malha2.jpeg"
+          },
+          {
+            "cor": "Rosa Coração",
+            "foto": "assets/images/produtos/Len_ol_malha4.jpeg"
           }
         ]
       }
