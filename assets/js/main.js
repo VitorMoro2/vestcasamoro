@@ -10,7 +10,7 @@
 
   const FALLBACK_DATA = [
     {
-      id: "sala", tab: "Sala", icon: "🛋️", nome: "Sala de Estar1",
+      id: "sala", tab: "Sala", icon: "🛋️", nome: "Sala de Estar",
       descricao: "Conforto e elegância para o seu espaço favorito", total: 24,
       imagem: "assets/Imagens Ambientes/Sala de estar.jpeg",
       produtos: [],
