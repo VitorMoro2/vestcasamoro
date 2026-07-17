@@ -341,15 +341,16 @@
     );
   }
 
-  /* ---------- Vídeo hero: fade-in ao ficar pronto ---------- */
+  /* ---------- Vídeo hero: remove cobertura quando pronto ---------- */
+  const heroCover = document.getElementById("hero-cover");
   const heroVideo = document.querySelector(".hero-bg-image");
-  if (heroVideo && heroVideo.tagName === "VIDEO") {
-    const showVideo = () => heroVideo.classList.add("ready");
+  if (heroCover && heroVideo) {
+    const revealHero = () => heroCover.classList.add("hidden-cover");
     if (heroVideo.readyState >= 3) {
-      showVideo();
+      revealHero();
     } else {
-      heroVideo.addEventListener("canplay", showVideo, { once: true });
-      setTimeout(showVideo, 2000); // fallback: mostra após 2s se o evento não disparar
+      heroVideo.addEventListener("canplay", revealHero, { once: true });
+      setTimeout(revealHero, 2500);
     }
   }
 
