@@ -266,6 +266,30 @@
         "preco": "R$ 175,00",
         "tag": "",
         "foto": "assets/images/produtos/Tapete_dubai2.jpeg"
+      },
+      {
+        "nome": "Escorredor Rainha c/ Porta Copos e Talher Mino",
+        "preco": "R$ 118,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Escorredor_de_lou_as1.jpeg"
+      },
+      {
+        "nome": "Escorredor Fan c/ Porta Copos - p/11 Pratos",
+        "preco": "R$ 76,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Escorredor_de_lou_as3.jpeg"
+      },
+      {
+        "nome": "Escorredor Duplo Black C/ Porta Talher / Copo P/ 12 Pratos",
+        "preco": "R$ 106,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Escorredor_de_lou_as4.jpeg"
+      },
+      {
+        "nome": "Escorredor Berco Cromado C/Porta CP P/13 pratos",
+        "preco": "R$ 90,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Escorredor_de_lou_as5.jpeg"
       }
     ]
   },
@@ -372,6 +396,12 @@
         "preco": "R$ 69,80",
         "tag": "",
         "foto": "assets/images/produtos/WhatsApp_Image_2026-05-14_at_10.03.05__3_.jpeg"
+      },
+      {
+        "nome": "Cesto Rattan c/ Tampa Basculante 50Lts.",
+        "preco": "R$ 73,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Cesto_Ratan.png"
       }
     ]
   }
