@@ -213,7 +213,6 @@
 
 .hero-bg-image {
   position: absolute;
-  /* Maior que a hero para sobrar margem ao mover no parallax sem revelar bordas */
   top: -8%;
   left: 0;
   width: 100%;
@@ -222,8 +221,12 @@
   object-position: center center;
   z-index: 0;
   will-change: transform;
-  /* Cor de fundo enquanto o vídeo carrega — evita flash branco */
   background: #0c0407;
+  opacity: 0;
+  transition: opacity .6s ease;
+}
+.hero-bg-image.ready {
+  opacity: 1;
 }
 
 .hero-overlay {

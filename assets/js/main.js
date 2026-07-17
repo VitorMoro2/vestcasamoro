@@ -341,6 +341,18 @@
     );
   }
 
+  /* ---------- Vídeo hero: fade-in ao ficar pronto ---------- */
+  const heroVideo = document.querySelector(".hero-bg-image");
+  if (heroVideo && heroVideo.tagName === "VIDEO") {
+    const showVideo = () => heroVideo.classList.add("ready");
+    if (heroVideo.readyState >= 3) {
+      showVideo();
+    } else {
+      heroVideo.addEventListener("canplay", showVideo, { once: true });
+      setTimeout(showVideo, 2000); // fallback: mostra após 2s se o evento não disparar
+    }
+  }
+
   /* ---------- Efeitos de rolagem (header, parallax, progresso) ---------- */
   const header          = document.getElementById("header");
   const heroEl          = document.getElementById("hero");
