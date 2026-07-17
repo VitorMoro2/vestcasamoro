@@ -97,6 +97,54 @@
         "preco": "R$ 459,00",
         "tag": "",
         "foto": "assets/images/produtos/Tapete_dupla_face1.jpeg"
+      },
+      {
+        "nome": "Almofada -  Medida 45x45cm",
+        "preco": "R$ 39,00",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/Almofada1.jpeg",
+        "variantes": [
+          {
+            "cor": "1",
+            "foto": "assets/images/produtos/Almofada2.jpeg"
+          },
+          {
+            "cor": "2",
+            "foto": "assets/images/produtos/Almofada3.jpeg"
+          },
+          {
+            "cor": "3",
+            "foto": "assets/images/produtos/Almofada4.jpeg"
+          },
+          {
+            "cor": "4",
+            "foto": "assets/images/produtos/Almofada5.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Capa para Almofada - Medida: 45x45cm",
+        "preco": "R$ 14,90",
+        "tag": "Exclusivo",
+        "foto": "assets/images/produtos/Almofada3.jpeg",
+        "variantes": [
+          {
+            "cor": "2",
+            "foto": "assets/images/produtos/Almofada2.jpeg"
+          },
+          {
+            "cor": "4",
+            "foto": "assets/images/produtos/Almofada4.jpeg"
+          },
+          {
+            "cor": "5",
+            "foto": "assets/images/produtos/Almofada5.jpeg"
+          },
+          {
+            "cor": "1",
+            "foto": "assets/images/produtos/Almofada1.jpeg"
+          }
+        ]
       }
     ]
   },
