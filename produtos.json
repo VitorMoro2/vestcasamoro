@@ -265,7 +265,13 @@
         "nome": "Tapete Carrara 3 peças",
         "preco": "R$ 175,00",
         "tag": "",
-        "foto": "assets/images/produtos/Tapete_dubai2.jpeg"
+        "foto": "assets/images/produtos/Tapete_dubai2.jpeg",
+        "variantes": [
+          {
+            "cor": "Preto",
+            "foto": "assets/images/produtos/Tapete_carara_3pcs_preto.jpeg"
+          }
+        ]
       },
       {
         "nome": "Escorredor Rainha c/ Porta Copos e Talher Mino",
@@ -290,6 +296,34 @@
         "preco": "R$ 90,00",
         "tag": "",
         "foto": "assets/images/produtos/Escorredor_de_lou_as5.jpeg"
+      },
+      {
+        "nome": "Tapete Artesão 3 pçs.",
+        "preco": "R$ 159,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Tapete_artes_o_3_pcs1.jpeg",
+        "variantes": [
+          {
+            "cor": "Marron",
+            "foto": "assets/images/produtos/Tapete_artes_o_3_pcs2.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Tapete Moldura 3 pcs",
+        "preco": "R$ 109,00",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/Tapete_Moldura_3pcs2.jpeg",
+        "variantes": [
+          {
+            "cor": "Colorido",
+            "foto": "assets/images/produtos/WhatsApp_Image_2026-07-23_at_11.11.10.jpeg"
+          },
+          {
+            "cor": "Marron",
+            "foto": "assets/images/produtos/Tapete_Moldura_3pcs3.jpeg"
+          }
+        ]
       }
     ]
   },
