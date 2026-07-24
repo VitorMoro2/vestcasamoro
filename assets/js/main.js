@@ -439,18 +439,19 @@
   if (year) year.textContent = new Date().getFullYear();
 
   /* ---------- Modal de produto ---------- */
-  const pModal    = document.getElementById("product-modal");
-  const pImg      = document.getElementById("pmodal-img");
-  const pTag      = document.getElementById("pmodal-tag");
-  const pTitle    = document.getElementById("pmodal-title");
-  const pPrice    = document.getElementById("pmodal-price");
-  const pDesc     = document.getElementById("pmodal-desc");
-  const pVarWrap  = document.getElementById("pmodal-var-wrap");
-  const pVarBtns  = document.getElementById("pmodal-var-btns");
-  const pCorNome  = document.getElementById("pmodal-cor-nome");
-  const pWa       = document.getElementById("pmodal-wa");
-  const pClose    = document.getElementById("pmodal-close");
-  const WA_NUMBER = "5567981566712";
+  const pModal       = document.getElementById("product-modal");
+  const pImg         = document.getElementById("pmodal-img");
+  const pTag         = document.getElementById("pmodal-tag");
+  const pTitle       = document.getElementById("pmodal-title");
+  const pPrice       = document.getElementById("pmodal-price");
+  const pDesc        = document.getElementById("pmodal-desc");
+  const pVarWrap     = document.getElementById("pmodal-var-wrap");
+  const pVarBtns     = document.getElementById("pmodal-var-btns");
+  const pCorNome     = document.getElementById("pmodal-cor-nome");
+  const pWa          = document.getElementById("pmodal-wa");
+  const pAddCart     = document.getElementById("pmodal-add-cart");
+  const pClose       = document.getElementById("pmodal-close");
+  const WA_NUMBER    = "5567981566712";
 
   function buildWaMsg(nome, preco, cor, fotoSrc) {
     const corLinha  = cor && cor !== "Padrão" ? `\n🎨 Cor: ${cor}` : "";
@@ -479,6 +480,24 @@
       pWa.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(buildWaMsg(nome, preco, corAtual, fotoAtual))}`;
     };
     updateWaLink();
+
+    // Botão adicionar ao carrinho
+    if (pAddCart) {
+      pAddCart.textContent = "Adicionar ao carrinho";
+      pAddCart.classList.remove("added");
+      pAddCart.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0" stroke-linecap="round" stroke-linejoin="round"/></svg> Adicionar ao carrinho`;
+      pAddCart.onclick = () => {
+        const added = addToCart({ nome, preco, cor: corAtual, foto: fotoAtual });
+        if (added) {
+          pAddCart.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Adicionado!`;
+          pAddCart.classList.add("added");
+          setTimeout(closeModal, 900);
+        } else {
+          pAddCart.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Já está no carrinho`;
+          pAddCart.classList.add("added");
+        }
+      };
+    }
 
     // Variantes
     pVarBtns.innerHTML = "";
@@ -540,6 +559,96 @@
       } catch (_) {}
     });
   }
+
+  /* ---------- Carrinho ---------- */
+  const cartFab     = document.getElementById("cart-fab");
+  const cartPanel   = document.getElementById("cart-panel");
+  const cartClose   = document.getElementById("cart-close");
+  const cartItems   = document.getElementById("cart-items");
+  const cartEmpty   = document.getElementById("cart-empty");
+  const cartFooter  = document.getElementById("cart-footer");
+  const cartBadge   = document.getElementById("cart-badge");
+  const cartCount   = document.getElementById("cart-count");
+  const cartWaBtn   = document.getElementById("cart-wa-btn");
+
+  let cart = [];
+
+  function buildCartWaMsg() {
+    const linhas = cart.map((item, i) => {
+      const cor  = item.cor && item.cor !== "Padrão" ? `\n   🎨 Cor: ${item.cor}` : "";
+      const foto = item.foto && !item.foto.startsWith("data:")
+        ? `\n   📷 ${item.foto.startsWith("http") ? item.foto : window.location.origin + "/" + item.foto.replace(/^\//, "")}`
+        : "";
+      return `${i + 1}. 🛍️ *${item.nome}*\n   💰 ${item.preco}${cor}${foto}`;
+    });
+    return `Olá! Tenho interesse nos seguintes produtos:\n\n${linhas.join("\n\n")}\n\nPoderia me dar mais informações?`;
+  }
+
+  function renderCart() {
+    const total = cart.length;
+    cartBadge.textContent = total;
+    cartCount.textContent = total;
+    cartFab.hidden = total === 0;
+    cartEmpty.style.display = total === 0 ? "flex" : "none";
+    cartFooter.hidden = total === 0;
+
+    cartItems.innerHTML = "";
+    cart.forEach((item, i) => {
+      const el = document.createElement("div");
+      el.className = "cart-item";
+      el.innerHTML = `
+        <img class="cart-item-img" src="${item.foto || FALLBACK}" alt="${item.nome}" onerror="this.src='${FALLBACK}'" />
+        <div class="cart-item-info">
+          <p class="cart-item-name">${item.nome}</p>
+          ${item.cor && item.cor !== "Padrão" ? `<p class="cart-item-cor">Cor: ${item.cor}</p>` : ""}
+          <p class="cart-item-price">${item.preco}</p>
+        </div>
+        <button class="cart-item-remove" aria-label="Remover ${item.nome}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg>
+        </button>`;
+      el.querySelector(".cart-item-remove").addEventListener("click", () => {
+        cart.splice(i, 1);
+        renderCart();
+      });
+      cartItems.appendChild(el);
+    });
+
+    if (cartWaBtn) {
+      cartWaBtn.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(buildCartWaMsg())}`;
+    }
+  }
+
+  function addToCart(item) {
+    const key = `${item.nome}__${item.cor}`;
+    if (cart.find(c => `${c.nome}__${c.cor}` === key)) return false;
+    cart.push(item);
+    renderCart();
+    cartFab.classList.remove("bump");
+    void cartFab.offsetWidth;
+    cartFab.classList.add("bump");
+    return true;
+  }
+
+  function openCart() {
+    cartPanel.hidden = false;
+    document.body.style.overflow = "hidden";
+    requestAnimationFrame(() => cartPanel.classList.add("cart-open"));
+  }
+
+  function closeCart() {
+    cartPanel.classList.remove("cart-open");
+    document.body.style.overflow = "";
+    cartPanel.addEventListener("transitionend", () => { cartPanel.hidden = true; }, { once: true });
+  }
+
+  if (cartFab)   cartFab.addEventListener("click", openCart);
+  if (cartClose) cartClose.addEventListener("click", closeCart);
+  if (cartPanel) {
+    cartPanel.addEventListener("click", e => { if (e.target === cartPanel) closeCart(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && !cartPanel.hidden) closeCart(); });
+  }
+
+  renderCart();
 
   /* ---------- Init ---------- */
   lazyLoad();
