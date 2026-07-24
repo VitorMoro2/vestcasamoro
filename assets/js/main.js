@@ -452,6 +452,15 @@
   const pClose    = document.getElementById("pmodal-close");
   const WA_NUMBER = "5567981566712";
 
+  function buildWaMsg(nome, preco, cor, fotoSrc) {
+    const corLinha  = cor && cor !== "Padrão" ? `\n🎨 Cor: ${cor}` : "";
+    const fotoUrl   = fotoSrc && !fotoSrc.startsWith("data:")
+      ? (fotoSrc.startsWith("http") ? fotoSrc : `${window.location.origin}/${fotoSrc.replace(/^\//, "")}`)
+      : null;
+    const fotoLinha = fotoUrl ? `\n📷 Foto: ${fotoUrl}` : "";
+    return `Olá! Tenho interesse neste produto:\n\n🛍️ *${nome}*${corLinha}\n💰 ${preco}${fotoLinha}\n\nPoderia me dar mais informações?`;
+  }
+
   function openModal(product) {
     const { nome, preco, foto, tag, descricao, variantes } = product;
 
@@ -462,7 +471,14 @@
     pPrice.textContent = preco;
     pDesc.textContent = descricao;
     pCorNome.textContent = "Padrão";
-    pWa.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Olá! Tenho interesse no produto: " + nome)}`;
+
+    let corAtual  = "Padrão";
+    let fotoAtual = foto;
+
+    const updateWaLink = () => {
+      pWa.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(buildWaMsg(nome, preco, corAtual, fotoAtual))}`;
+    };
+    updateWaLink();
 
     // Variantes
     pVarBtns.innerHTML = "";
@@ -483,6 +499,9 @@
           btn.classList.add("active");
           btn.setAttribute("aria-selected", "true");
           pCorNome.textContent = label;
+          corAtual  = label;
+          fotoAtual = src;
+          updateWaLink();
         });
         return btn;
       };
