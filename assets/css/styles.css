@@ -206,6 +206,7 @@
 .hero-section {
   position: relative;
   height: 100vh;
+  height: 100dvh; /* mobile: usa viewport real sem a barra do navegador */
   overflow: hidden;
   /* Puxa para trás do header transparente (h-20 = 80px) */
   margin-top: -80px;
