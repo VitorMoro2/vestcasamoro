@@ -453,11 +453,17 @@
   const pClose       = document.getElementById("pmodal-close");
   const WA_NUMBER    = "5567981566712";
 
+  function toAbsoluteUrl(fotoSrc) {
+    if (!fotoSrc || fotoSrc.startsWith("data:")) return null;
+    if (fotoSrc.startsWith("http")) return fotoSrc;
+    // Codifica cada segmento do caminho para lidar com caracteres especiais nos nomes
+    const encoded = fotoSrc.replace(/^\//, "").split("/").map(encodeURIComponent).join("/");
+    return `${window.location.origin}/${encoded}`;
+  }
+
   function buildWaMsg(nome, preco, cor, fotoSrc) {
     const corLinha  = cor && cor !== "Padrão" ? `\n🎨 Cor: ${cor}` : "";
-    const fotoUrl   = fotoSrc && !fotoSrc.startsWith("data:")
-      ? (fotoSrc.startsWith("http") ? fotoSrc : `${window.location.origin}/${fotoSrc.replace(/^\//, "")}`)
-      : null;
+    const fotoUrl   = toAbsoluteUrl(fotoSrc);
     const fotoLinha = fotoUrl ? `\n📷 Foto: ${fotoUrl}` : "";
     return `Olá! Tenho interesse neste produto:\n\n🛍️ *${nome}*${corLinha}\n💰 ${preco}${fotoLinha}\n\nPoderia me dar mais informações?`;
   }
@@ -576,9 +582,8 @@
   function buildCartWaMsg() {
     const linhas = cart.map((item, i) => {
       const cor  = item.cor && item.cor !== "Padrão" ? `\n   🎨 Cor: ${item.cor}` : "";
-      const foto = item.foto && !item.foto.startsWith("data:")
-        ? `\n   📷 ${item.foto.startsWith("http") ? item.foto : window.location.origin + "/" + item.foto.replace(/^\//, "")}`
-        : "";
+      const url  = toAbsoluteUrl(item.foto);
+      const foto = url ? `\n   📷 ${url}` : "";
       return `${i + 1}. 🛍️ *${item.nome}*\n   💰 ${item.preco}${cor}${foto}`;
     });
     return `Olá! Tenho interesse nos seguintes produtos:\n\n${linhas.join("\n\n")}\n\nPoderia me dar mais informações?`;
