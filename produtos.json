@@ -18,11 +18,11 @@
         "nome": "Vaso preto e branco",
         "preco": "R$ 49,90",
         "tag": "Mais vendido",
-        "foto": "assets/images/produtos/6018afde-0145-4f8e-9fe1-9f7e29570bcb.jfif",
+        "foto": "assets/images/produtos/Vaso_preto_e_branco_1.jpg",
         "variantes": [
           {
             "cor": "Branco",
-            "foto": "assets/images/produtos/299f913b-ffd5-4830-9c5f-aad3dafef025.jfif"
+            "foto": "assets/images/produtos/Vaso_branco_2.jpg"
           }
         ]
       },
