@@ -353,12 +353,18 @@
   const heroCover = document.getElementById("hero-cover");
   const heroVideo = document.querySelector(".hero-bg-image");
   if (heroCover && heroVideo) {
-    const revealHero = () => heroCover.classList.add("hidden-cover");
-    if (heroVideo.readyState >= 3) {
-      revealHero();
+    let revealed = false;
+    const revealHero = () => {
+      if (revealed) return;
+      revealed = true;
+      heroCover.classList.add("hidden-cover");
+    };
+    // loadedmetadata dispara assim que o browser conhece as dimensões do vídeo — muito mais rápido que canplay
+    if (heroVideo.readyState >= 1) {
+      setTimeout(revealHero, 80);
     } else {
-      heroVideo.addEventListener("canplay", revealHero, { once: true });
-      setTimeout(revealHero, 2500);
+      heroVideo.addEventListener("loadedmetadata", () => setTimeout(revealHero, 80), { once: true });
+      setTimeout(revealHero, 800); // fallback máximo de 800ms
     }
   }
 
