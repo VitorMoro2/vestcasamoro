@@ -333,6 +333,7 @@
   display: inline-flex; align-items: center; gap: 9px; padding: 15px 30px;
   background: #D4AF37; color: #2B1A0E; border-radius: 999px;
   font-size: 14px; font-weight: 600;
+  border: 1px solid rgba(255,255,255,.35);
   box-shadow: 0 10px 28px -8px rgba(212,175,55,.55);
   transition: background .25s ease, transform .2s ease, box-shadow .25s ease;
 }
