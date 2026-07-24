@@ -109,8 +109,16 @@
                       </div>
                     </div>`
                   : "";
+                const productData = JSON.stringify({
+                  nome: p.nome || "",
+                  preco: p.preco || "",
+                  foto: p.foto || "",
+                  tag: p.tag || "",
+                  descricao: p.descricao || "",
+                  variantes: p.variantes || []
+                });
                 return `
-                <div class="amb-card">
+                <div class="amb-card" data-product="${productData.replace(/"/g, "&quot;")}">
                   <div class="amb-card-media">
                     <img id="${imgId}" src="${mainSrc}" alt="${p.nome}" onerror="this.src='${FALLBACK}'" />
                     ${p.tag ? `<span class="amb-card-tag">✦ ${p.tag}</span>` : ""}
@@ -429,6 +437,90 @@
   /* ---------- Year ---------- */
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
+
+  /* ---------- Modal de produto ---------- */
+  const pModal    = document.getElementById("product-modal");
+  const pImg      = document.getElementById("pmodal-img");
+  const pTag      = document.getElementById("pmodal-tag");
+  const pTitle    = document.getElementById("pmodal-title");
+  const pPrice    = document.getElementById("pmodal-price");
+  const pDesc     = document.getElementById("pmodal-desc");
+  const pVarWrap  = document.getElementById("pmodal-var-wrap");
+  const pVarBtns  = document.getElementById("pmodal-var-btns");
+  const pCorNome  = document.getElementById("pmodal-cor-nome");
+  const pWa       = document.getElementById("pmodal-wa");
+  const pClose    = document.getElementById("pmodal-close");
+  const WA_NUMBER = "5567981566712";
+
+  function openModal(product) {
+    const { nome, preco, foto, tag, descricao, variantes } = product;
+
+    pImg.src = foto || FALLBACK;
+    pImg.alt = nome;
+    pTag.textContent = tag ? `✦ ${tag}` : "";
+    pTitle.textContent = nome;
+    pPrice.textContent = preco;
+    pDesc.textContent = descricao;
+    pCorNome.textContent = "Padrão";
+    pWa.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Olá! Tenho interesse no produto: " + nome)}`;
+
+    // Variantes
+    pVarBtns.innerHTML = "";
+    if (variantes && variantes.length > 0) {
+      pVarWrap.hidden = false;
+
+      const mkBtn = (src, label, active) => {
+        const btn = document.createElement("button");
+        btn.className = "pmodal-var-btn" + (active ? " active" : "");
+        btn.setAttribute("aria-label", label);
+        btn.setAttribute("title", label);
+        btn.setAttribute("aria-selected", active ? "true" : "false");
+        btn.innerHTML = `<img src="${src || FALLBACK}" alt="${label}" onerror="this.src='${FALLBACK}'" />`;
+        btn.addEventListener("click", () => {
+          pImg.style.opacity = "0";
+          setTimeout(() => { pImg.src = src || FALLBACK; pImg.style.opacity = "1"; }, 180);
+          pVarBtns.querySelectorAll(".pmodal-var-btn").forEach(b => { b.classList.remove("active"); b.setAttribute("aria-selected", "false"); });
+          btn.classList.add("active");
+          btn.setAttribute("aria-selected", "true");
+          pCorNome.textContent = label;
+        });
+        return btn;
+      };
+
+      pVarBtns.appendChild(mkBtn(foto, "Padrão", true));
+      variantes.forEach(v => pVarBtns.appendChild(mkBtn(v.foto, v.cor, false)));
+    } else {
+      pVarWrap.hidden = true;
+    }
+
+    pModal.hidden = false;
+    document.body.style.overflow = "hidden";
+    requestAnimationFrame(() => pModal.classList.add("pmodal-open"));
+  }
+
+  function closeModal() {
+    pModal.classList.remove("pmodal-open");
+    document.body.style.overflow = "";
+    pModal.addEventListener("transitionend", () => { pModal.hidden = true; }, { once: true });
+  }
+
+  if (pModal) {
+    pClose.addEventListener("click", closeModal);
+    pModal.addEventListener("click", (e) => { if (e.target === pModal) closeModal(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !pModal.hidden) closeModal(); });
+  }
+
+  // Abre modal ao clicar no card (ignora clique em botão de variante)
+  if (ambPanelsEl) {
+    ambPanelsEl.addEventListener("click", (e) => {
+      if (e.target.closest(".var-thumb")) return;
+      const card = e.target.closest(".amb-card[data-product]");
+      if (!card) return;
+      try {
+        openModal(JSON.parse(card.dataset.product));
+      } catch (_) {}
+    });
+  }
 
   /* ---------- Init ---------- */
   lazyLoad();

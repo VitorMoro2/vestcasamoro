@@ -508,3 +508,149 @@
 [data-reveal="fade"]  { transform: none; }
 
 [data-reveal].visible { opacity: 1; transform: none; }
+
+/* ============================================================
+   MODAL DE PRODUTO
+   ============================================================ */
+.pmodal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  background: rgba(20,10,6,.6);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .25s ease;
+  pointer-events: none;
+}
+.pmodal-backdrop.pmodal-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.pmodal-sheet {
+  background: #FAF8F5;
+  border-radius: 22px 22px 0 0;
+  width: 100%;
+  max-height: 92dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  position: relative;
+  transform: translateY(100%);
+  transition: transform .35s cubic-bezier(.32,1,.4,1);
+}
+.pmodal-backdrop.pmodal-open .pmodal-sheet {
+  transform: translateY(0);
+}
+
+/* Handle de arraste (decorativo) */
+.pmodal-sheet::before {
+  content: "";
+  display: block;
+  width: 40px; height: 4px;
+  background: rgba(43,26,14,.18);
+  border-radius: 99px;
+  margin: 12px auto 0;
+}
+
+.pmodal-close {
+  position: absolute;
+  top: 14px; right: 14px;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: rgba(43,26,14,.08);
+  border: none;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: #2B1A0E;
+  transition: background .2s ease;
+  z-index: 1;
+}
+.pmodal-close:hover { background: rgba(43,26,14,.16); }
+
+.pmodal-img-wrap {
+  position: relative;
+  aspect-ratio: 1/1;
+  background: #E5D5C0;
+  margin-top: 8px;
+  overflow: hidden;
+}
+.pmodal-img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity .2s ease;
+}
+.pmodal-tag {
+  position: absolute; top: 12px; left: 12px;
+  font-size: 11px; font-weight: 700; letter-spacing: .03em;
+  color: #C5A253; background: rgba(251,247,240,.92);
+  padding: 4px 10px; border-radius: 999px;
+}
+.pmodal-tag:empty { display: none; }
+
+.pmodal-body {
+  padding: 20px 20px 32px;
+}
+.pmodal-name {
+  font-family: "Playfair Display", serif;
+  font-size: 20px; font-weight: 700;
+  color: #2B1A0E; line-height: 1.3;
+  margin-bottom: 6px;
+}
+.pmodal-price {
+  font-family: "Playfair Display", serif;
+  font-size: 22px; font-weight: 700;
+  color: #6B1F2B;
+  margin-bottom: 10px;
+}
+.pmodal-desc {
+  font-size: 13px; color: rgba(43,26,14,.6);
+  line-height: 1.6; margin-bottom: 16px;
+}
+.pmodal-desc:empty { display: none; }
+
+.pmodal-var-wrap { margin-bottom: 22px; }
+.pmodal-var-label {
+  font-size: 12px; color: rgba(43,26,14,.48);
+  margin-bottom: 10px;
+}
+.pmodal-var-label strong { color: #2B1A0E; font-weight: 700; }
+.pmodal-var-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+.pmodal-var-btn {
+  width: 64px; height: 64px;
+  border-radius: 10px; overflow: hidden;
+  border: 2px solid transparent;
+  background: #E5D5C0;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .15s ease;
+  flex-shrink: 0;
+}
+.pmodal-var-btn img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+.pmodal-var-btn:hover:not(.active) { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0,0,0,.13); }
+.pmodal-var-btn.active { border-color: #fff; box-shadow: 0 0 0 2px #8B5E3C, 0 4px 12px rgba(0,0,0,.12); }
+
+.pmodal-wa-btn {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  width: 100%; padding: 16px;
+  background: #25D366; color: #fff;
+  border-radius: 14px;
+  font-size: 15px; font-weight: 600;
+  box-shadow: 0 8px 24px -6px rgba(37,211,102,.45);
+  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.pmodal-wa-btn:hover { background: #1ebe5b; transform: translateY(-2px); box-shadow: 0 12px 28px -6px rgba(37,211,102,.5); }
+
+/* Desktop: painel centralizado */
+@media (min-width: 600px) {
+  .pmodal-backdrop { align-items: center; }
+  .pmodal-sheet {
+    border-radius: 22px;
+    width: 100%; max-width: 460px;
+    max-height: 88dvh;
+    transform: scale(.94) translateY(16px);
+  }
+  .pmodal-backdrop.pmodal-open .pmodal-sheet { transform: scale(1) translateY(0); }
+  .pmodal-sheet::before { display: none; }
+}
