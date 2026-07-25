@@ -324,6 +324,42 @@
             "foto": "assets/images/produtos/Tapete_Moldura_3pcs3.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Taça Cappuccino 250mç c/6 und.",
+        "preco": "R$ 99,00",
+        "tag": "",
+        "foto": "assets/images/produtos/WhatsApp_Image_2026-07-24_at_17.23.29.jpeg"
+      },
+      {
+        "nome": "Mixer Smart c/ Copo 127V",
+        "preco": "R$ 174,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Mixer_in_kitchen_environment_202607250934.jpeg"
+      },
+      {
+        "nome": "Moedor Eletrico Sal e Pimenta",
+        "preco": "R$ 64,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Electric_grinder_in_kitchen_envi__202607250937.jpeg"
+      },
+      {
+        "nome": "Moedor de Temperos Madeira 21,5cm",
+        "preco": "R$ 53,80",
+        "tag": "",
+        "foto": "assets/images/produtos/Moedor_de_pimenta_Madeira.jpeg"
+      },
+      {
+        "nome": "Moedor de Temperos Vidro e Aço Chef 180ml",
+        "preco": "R$ 23,90",
+        "tag": "",
+        "foto": "assets/images/produtos/images.jfif"
+      },
+      {
+        "nome": "Galheteiro 10ml Sprau inox Vidro c/ Caixa Litografada",
+        "preco": "R$ 36,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Galeteiro_1.png"
       }
     ]
   },
@@ -395,6 +431,12 @@
             "foto": "assets/images/produtos/Passadeira6.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Peseira Pompom medida: 65cmx2,30m",
+        "preco": "R$ 99,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Peseira1.jpeg"
       }
     ]
   },
