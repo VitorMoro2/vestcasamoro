@@ -360,6 +360,12 @@
         "preco": "R$ 36,90",
         "tag": "",
         "foto": "assets/images/produtos/Galeteiro_1.png"
+      },
+      {
+        "nome": "Manteiguera Deli Lyor",
+        "preco": "R$ 39,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Manteiguera.jpeg"
       }
     ]
   },
@@ -437,6 +443,30 @@
         "preco": "R$ 99,00",
         "tag": "",
         "foto": "assets/images/produtos/Peseira1.jpeg"
+      },
+      {
+        "nome": "Cobre Leito Avelino Queen 3 pçs",
+        "preco": "R$ 145,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Colcha4.jpeg"
+      },
+      {
+        "nome": "Capa de Colchão Solteiro - Cor Sortida",
+        "preco": "R$ 54,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Capa_de_Col__o.jpeg"
+      },
+      {
+        "nome": "Capa de Colchão Casal - Cor Sortida",
+        "preco": "R$ 76,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Capa_de_Col__o.jpeg"
+      },
+      {
+        "nome": "Capa de Colchão Queen - Cor Sortida",
+        "preco": "R$ 84,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Capa_de_Col__o.jpeg"
       }
     ]
   },
