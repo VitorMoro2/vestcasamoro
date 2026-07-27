@@ -145,6 +145,24 @@
             "foto": "assets/images/produtos/Almofada1.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Caixa Fita Cinza - 29L - 45 X 33 X 25 CM",
+        "preco": "R$ 69,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Caixa_org._cinza.jpeg"
+      },
+      {
+        "nome": "Caixa Organizadora Rattan 07Lts.",
+        "preco": "R$ 16,50",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/CaixaRattan07l.jpeg"
+      },
+      {
+        "nome": "Caixa Organizadora Rattan 15Lts.",
+        "preco": "R$ 31,90",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/CaixaRattan15l.jpeg"
       }
     ]
   },
@@ -366,6 +384,22 @@
         "preco": "R$ 39,90",
         "tag": "",
         "foto": "assets/images/produtos/Manteiguera.jpeg"
+      },
+      {
+        "nome": "Garrafa Termica 1L Preta Cabo de Madeira",
+        "preco": "R$ 79,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Carrafa_caf__cabo_madeira_preta.jpeg",
+        "variantes": [
+          {
+            "cor": "Verde",
+            "foto": "assets/images/produtos/Carrafa_caf__cabo_madeira_verde.jpeg"
+          },
+          {
+            "cor": "Rosa",
+            "foto": "assets/images/produtos/Garrafa_Termica_1lt_rosa_cabo_de_madeira.jpeg"
+          }
+        ]
       }
     ]
   },
@@ -508,6 +542,24 @@
         "preco": "R$ 73,00",
         "tag": "",
         "foto": "assets/images/produtos/Cesto_Ratan.png"
+      },
+      {
+        "nome": "Cesto Telado Label Madeira 49L - 39,5 X 30 X 59,2 CM",
+        "preco": "R$ 73,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Cesto_Label.jpeg"
+      },
+      {
+        "nome": "Cesto Roupa Dobravel Azul",
+        "preco": "R$ 59,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Cesto_tecido_azul.jpeg",
+        "variantes": [
+          {
+            "cor": "Preto",
+            "foto": "assets/images/produtos/Cesto_Tecido_cinza.jpeg"
+          }
+        ]
       }
     ]
   }
