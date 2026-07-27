@@ -163,6 +163,18 @@
         "preco": "R$ 31,90",
         "tag": "Mais vendido",
         "foto": "assets/images/produtos/CaixaRattan15l.jpeg"
+      },
+      {
+        "nome": "Caixa Organizadora Rattan 20Lts.",
+        "preco": "R$ 37,50",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/CaixaRattan20.jpeg"
+      },
+      {
+        "nome": "Caixa Organizadora Rattan 40Lts.",
+        "preco": "R$ 66,50",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/CaixaRattan40l.jpeg"
       }
     ]
   },
