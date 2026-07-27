@@ -33,12 +33,6 @@
       imagem: "assets/Imagens Ambientes/Banheiro.png",
       produtos: [],
     },
-    {
-      id: "organizacao", tab: "Organizacao", icon: "🛁", nome: "Organização",
-      descricao: "Organize seu ambiente com sofistcação", total: 15,
-      imagem: "assets/Imagens Ambientes/Organizacao.png",
-      produtos: [],
-    },
   ];
 
   /* ---------- Render ambientes (abas + painéis) ---------- */
