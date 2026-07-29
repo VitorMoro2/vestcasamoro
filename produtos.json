@@ -606,6 +606,12 @@
             "foto": "assets/images/produtos/Cesto_Tecido_cinza.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Escova Sanitaria",
+        "preco": "R$ 48,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Escova_sanitaria_inox.jpeg"
       }
     ]
   }
