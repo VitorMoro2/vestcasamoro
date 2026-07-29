@@ -412,6 +412,40 @@
             "foto": "assets/images/produtos/Garrafa_Termica_1lt_rosa_cabo_de_madeira.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Xicara jg 6pçs c/Pires Café Branca",
+        "preco": "R$ 85,00",
+        "tag": "",
+        "foto": "assets/images/produtos/WhatsApp_Image_2026-07-27_at_15.47.47.jpeg"
+      },
+      {
+        "nome": "Xicara jg 6pçs c/Pires Café Color",
+        "preco": "R$ 89,00",
+        "tag": "",
+        "foto": "assets/images/produtos/xica_caf__preta.jpeg",
+        "variantes": [
+          {
+            "cor": "Rosa",
+            "foto": "assets/images/produtos/xica_caf__rosa.jpeg"
+          },
+          {
+            "cor": "Amarela",
+            "foto": "assets/images/produtos/xica_caf__amarela.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Xicara jg 6pçs c/Pires Chá Colorida",
+        "preco": "R$ 168,00",
+        "tag": "",
+        "foto": "assets/images/produtos/xicara_ch__listra_laranja.jpeg",
+        "variantes": [
+          {
+            "cor": "Listra Azul",
+            "foto": "assets/images/produtos/xicara_ch__listra_azul.jpeg"
+          }
+        ]
       }
     ]
   },
