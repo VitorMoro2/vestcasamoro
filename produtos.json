@@ -564,7 +564,13 @@
         "nome": "Lençol Algodão Casal 3200 fios 4 pçs - Bouquetex",
         "preco": "R$ 179,00",
         "tag": "",
-        "foto": "assets/images/produtos/Jogo_len_ol_casal_algodao_1.jpeg"
+        "foto": "assets/images/produtos/Jogo_len_ol_casal_algodao_1.jpeg",
+        "variantes": [
+          {
+            "cor": "Cores disponiveis",
+            "foto": "assets/images/produtos/Jogo_len_ol_casal_algodao_cores.jpeg"
+          }
+        ]
       }
     ]
   },
