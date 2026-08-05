@@ -96,7 +96,13 @@
         "nome": "Tapete Dupla Face 2,00x2,50m",
         "preco": "R$ 459,00",
         "tag": "",
-        "foto": "assets/images/produtos/Tapete_dupla_face1.jpeg"
+        "foto": "assets/images/produtos/Tapete_dupla_face1.jpeg",
+        "variantes": [
+          {
+            "cor": "Verso",
+            "foto": "assets/images/produtos/Tapete_Dupla_face2.jpeg"
+          }
+        ]
       },
       {
         "nome": "Almofada -  Medida 45x45cm",
@@ -446,6 +452,12 @@
             "foto": "assets/images/produtos/xicara_ch__listra_azul.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Pano de Prato Jackguard Premium",
+        "preco": "R$ 11,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Pano_de_prato_jackguard.jpeg"
       }
     ]
   },
@@ -624,6 +636,12 @@
         "preco": "R$ 44,90",
         "tag": "",
         "foto": "assets/images/produtos/Toalha_de_banho_ouro.jpeg"
+      },
+      {
+        "nome": "Toalha de Banho Kids",
+        "preco": "R$ 38,50",
+        "tag": "",
+        "foto": "assets/images/produtos/Toalha_de_banho_kids.jpeg"
       }
     ]
   }
