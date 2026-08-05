@@ -559,6 +559,12 @@
         "preco": "R$ 84,00",
         "tag": "",
         "foto": "assets/images/produtos/Capa_de_Col__o.jpeg"
+      },
+      {
+        "nome": "Lençol Algodão Casal 3200 fios 4 pçs - Bouquetex",
+        "preco": "R$ 179,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Jogo_len_ol_casal_algodao_1.jpeg"
       }
     ]
   },
@@ -642,6 +648,12 @@
         "preco": "R$ 38,50",
         "tag": "",
         "foto": "assets/images/produtos/Toalha_de_banho_kids.jpeg"
+      },
+      {
+        "nome": "Prateleira Tripla com Rodizio - 54,5 X 13,5 X 65 CM",
+        "preco": "R$ 149,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Prateleira_arthi.jpeg"
       }
     ]
   }
