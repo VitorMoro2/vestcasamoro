@@ -567,8 +567,20 @@
         "foto": "assets/images/produtos/Jogo_len_ol_casal_algodao_1.jpeg",
         "variantes": [
           {
-            "cor": "Cores disponiveis",
-            "foto": "assets/images/produtos/Jogo_len_ol_casal_algodao_cores.jpeg"
+            "cor": "Cinza escuro",
+            "foto": "assets/images/produtos/Jogo_len_ol_casal_algodao_2.jpeg"
+          },
+          {
+            "cor": "Berge escuro",
+            "foto": "assets/images/produtos/Jogo_len_ol_casal_algodao_3.jpeg"
+          },
+          {
+            "cor": "Cinza claro",
+            "foto": "assets/images/produtos/Jogo_len_ol_casal_algodao_4.jpeg"
+          },
+          {
+            "cor": "Berge claro",
+            "foto": "assets/images/produtos/Jogo_len_ol_casal_algodao_5.jpeg"
           }
         ]
       }
