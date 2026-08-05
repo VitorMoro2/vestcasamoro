@@ -611,7 +611,19 @@
         "nome": "Escova Sanitaria",
         "preco": "R$ 48,00",
         "tag": "",
-        "foto": "assets/images/produtos/Escova_sanitaria_inox.jpeg"
+        "foto": "assets/images/produtos/Escova_sanitaria_inox.jpeg",
+        "variantes": [
+          {
+            "cor": "Preta",
+            "foto": "assets/images/produtos/Escova_sanitaria_preta.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Toalha de Banho Ouro, Medida 75cmx1,50m",
+        "preco": "R$ 44,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Toalha_de_banho_ouro.jpeg"
       }
     ]
   }
