@@ -223,6 +223,12 @@
         "preco": "R$ 64,00",
         "tag": "",
         "foto": "assets/images/produtos/Caixa_fita_cinza1.jpeg"
+      },
+      {
+        "nome": "Suporte Papel Higiênico p/ 4 Rolos Cromador",
+        "preco": "R$ 69,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Porta_Pepel_Hig..jpeg"
       }
     ]
   },
@@ -714,6 +720,12 @@
         "preco": "R$ 149,00",
         "tag": "",
         "foto": "assets/images/produtos/Prateleira_arthi.jpeg"
+      },
+      {
+        "nome": "Porta Toalha de Banho Piatina 3M",
+        "preco": "R$ 99,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Porta_Toalha.jpeg"
       }
     ]
   }
