@@ -181,6 +181,30 @@
         "preco": "R$ 66,50",
         "tag": "Mais vendido",
         "foto": "assets/images/produtos/CaixaRattan40l.jpeg"
+      },
+      {
+        "nome": "Tapete Peludo 1,50x2,00m",
+        "preco": "R$ 169,00",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/Tepete_peludo_1_5x2_0_cinza.jpeg",
+        "variantes": [
+          {
+            "cor": "Berge",
+            "foto": "assets/images/produtos/Tepete_peludo_1_5x2_0_berge.jpeg"
+          },
+          {
+            "cor": "Cinza escuro",
+            "foto": "assets/images/produtos/Tepete_peludo_1_5x2_0_cinza_escuro.jpeg"
+          },
+          {
+            "cor": "Marron",
+            "foto": "assets/images/produtos/Tepete_peludo_1_5x2_0_marron.jpeg"
+          },
+          {
+            "cor": "Preto",
+            "foto": "assets/images/produtos/Tepete_peludo_1_5x2_0_preto.jpeg"
+          }
+        ]
       }
     ]
   },
