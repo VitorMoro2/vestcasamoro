@@ -205,6 +205,24 @@
             "foto": "assets/images/produtos/Tepete_peludo_1_5x2_0_preto.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Caixa Telado Label Madira 08L - 29,5 X 24 X 19 CM",
+        "preco": "R$ 29,70",
+        "tag": "",
+        "foto": "assets/images/produtos/Cesta_Label_8l.jpeg"
+      },
+      {
+        "nome": "Caixa Fita Cinza - 11L - 32 X 32 X 13 CM",
+        "preco": "R$ 39,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Caixa_fita_cinza1.jpeg"
+      },
+      {
+        "nome": "Caixa Fita Cinza - 15L - 45 X 33 X 13 CM",
+        "preco": "R$ 64,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Caixa_fita_cinza1.jpeg"
       }
     ]
   },
