@@ -500,6 +500,42 @@
         "preco": "R$ 11,00",
         "tag": "",
         "foto": "assets/images/produtos/Pano_de_prato_jackguard.jpeg"
+      },
+      {
+        "nome": "Copo Stanley 140ml",
+        "preco": "R$ 25,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Copo_stanley_terere.jpeg"
+      },
+      {
+        "nome": "Copo Stanley Porta Latinha e Garraga 420ml",
+        "preco": "R$ 49,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Copo_stanley_porta_latinha.jpeg"
+      },
+      {
+        "nome": "Copo Stanley 650ml",
+        "preco": "R$ 67,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Copo_stanley_650ml.jpeg"
+      },
+      {
+        "nome": "Copo Stanley Cuia 260ml",
+        "preco": "R$ 38,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Copo_stanley_cuia_260ml.jpeg"
+      },
+      {
+        "nome": "Garrafa Stanley 650ml",
+        "preco": "R$ 64,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Garrafa_stanley1.jpeg"
+      },
+      {
+        "nome": "Copo Stanley 1200ml",
+        "preco": "R$ 99,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Copo_stanley_1200ml.jpeg"
       }
     ]
   },
