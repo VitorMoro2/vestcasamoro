@@ -762,6 +762,34 @@
         "preco": "R$ 69,90",
         "tag": "",
         "foto": "assets/images/produtos/Porta_Pepel_Hig..jpeg"
+      },
+      {
+        "nome": "Organizador Rattan c/ 3 Divisorais",
+        "preco": "R$ 14,50",
+        "tag": "",
+        "foto": "assets/images/produtos/Organiza_tudo5.jpeg",
+        "variantes": [
+          {
+            "cor": "Branca",
+            "foto": "assets/images/produtos/Org_Ratan_3_div_Branco.jpeg"
+          },
+          {
+            "cor": "Preto",
+            "foto": "assets/images/produtos/Org_Ratan_3_div.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Organizador Rattan c/ 6 Divisorais",
+        "preco": "R$ 21,90",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/Organizador_Ratan_6_divisoria.jpeg",
+        "variantes": [
+          {
+            "cor": "Preto",
+            "foto": "assets/images/produtos/Org_Ratan_6_div.jpeg"
+          }
+        ]
       }
     ]
   }
