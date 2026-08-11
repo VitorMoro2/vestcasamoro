@@ -725,6 +725,18 @@
             "foto": "assets/images/produtos/Jogo_len_ol_casal_algodao_5.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Lençol Algodão Queen 5000Fios 6 pçs - CasaTex",
+        "preco": "R$ 329,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Jogo_len_ol_queen_algodao_Casatex_2.jpeg",
+        "variantes": [
+          {
+            "cor": "Berge",
+            "foto": "assets/images/produtos/Jogo_len_ol_queen_algodao_Casatex_3.jpeg"
+          }
+        ]
       }
     ]
   },
