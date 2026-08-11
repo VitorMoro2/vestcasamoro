@@ -564,6 +564,42 @@
             "foto": "assets/images/produtos/Organizor_Ratan_6_div_preto.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Porta Queijo Cristal",
+        "preco": "R$ 24,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Porta_queijo_cristal.jpeg"
+      },
+      {
+        "nome": "Manteiguera Cristal",
+        "preco": "R$ 21,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Manteiguera_cristal.jpeg"
+      },
+      {
+        "nome": "Porta Pão, Doces Cristal",
+        "preco": "R$ 32,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Porta_P_o_cristal.jpeg"
+      },
+      {
+        "nome": "Molheira Dublin 140ml",
+        "preco": "R$ 28,00",
+        "tag": "Novo",
+        "foto": "assets/images/produtos/Molheira_deli.jpeg"
+      },
+      {
+        "nome": "Taça Tailandia  2,5L - Ø23 X 18 CM",
+        "preco": "R$ 69,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Ta_a_tailandia.jpeg"
+      },
+      {
+        "nome": "Taça Boca Torta  - Ø19 X 20 CM 1,8 L",
+        "preco": "R$ 56,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Ta_a_boca_torta.jpeg"
       }
     ]
   },
