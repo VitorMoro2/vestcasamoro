@@ -737,6 +737,30 @@
             "foto": "assets/images/produtos/Jogo_len_ol_queen_algodao_Casatex_4.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Lençol Algodão King 5000Fios 4 pçs - CasaTex",
+        "preco": "R$ 339,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Jogo_len_ol_king_algodao_Casatex_verde.jpeg",
+        "variantes": [
+          {
+            "cor": "Berge",
+            "foto": "assets/images/produtos/Jogo_len_ol_king_algodao_Casatex_berge.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Lençol Algodão Queen 5000Fios 4 pçs - CasaTex",
+        "preco": "R$ 298,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Jogo_len_ol_queen_algodao_Casatex_berge.jpeg",
+        "variantes": [
+          {
+            "cor": "Berge",
+            "foto": "assets/images/produtos/Jogo_len_ol_king_algodao_Casatex_berge.jpeg"
+          }
+        ]
       }
     ]
   },
