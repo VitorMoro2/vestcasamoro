@@ -239,6 +239,22 @@
             "foto": "assets/images/produtos/Cortina_napoli_-_caqui.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Cortina Napoli Blackout 2,00x1,80m",
+        "preco": "R$ 149,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Cortina_napoli_-_cinza.jpeg",
+        "variantes": [
+          {
+            "cor": "Caqui",
+            "foto": "assets/images/produtos/Cortina_napoli_-_caqui.jpeg"
+          },
+          {
+            "cor": "Fendi",
+            "foto": "assets/images/produtos/Cortina_napoli_-_fendi.jpeg"
+          }
+        ]
       }
     ]
   },
