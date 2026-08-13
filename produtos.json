@@ -223,6 +223,22 @@
         "preco": "R$ 64,00",
         "tag": "",
         "foto": "assets/images/produtos/Caixa_fita_cinza1.jpeg"
+      },
+      {
+        "nome": "Cortina Napoli Blackout 2,00x2,30m",
+        "preco": "R$ 179,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Cortina_napoli_-_fendi.jpeg",
+        "variantes": [
+          {
+            "cor": "Cinza",
+            "foto": "assets/images/produtos/Cortina_napoli_-_cinza.jpeg"
+          },
+          {
+            "cor": "Caqui",
+            "foto": "assets/images/produtos/Cortina_napoli_-_caqui.jpeg"
+          }
+        ]
       }
     ]
   },
@@ -600,6 +616,18 @@
         "preco": "R$ 56,90",
         "tag": "",
         "foto": "assets/images/produtos/Ta_a_boca_torta.jpeg"
+      },
+      {
+        "nome": "Cortina Tulipa 2.50 x 1,20m Rendam",
+        "preco": "R$ 75,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Cortina_renda_tulipa.jpeg",
+        "variantes": [
+          {
+            "cor": "Uva",
+            "foto": "assets/images/produtos/Cortina_renda_uva.jpeg"
+          }
+        ]
       }
     ]
   },
