@@ -424,6 +424,7 @@
 @media (max-width: 768px) { .amb-banner { height: 200px; } }
 .amb-banner img { width: 100%; height: 100%; object-fit: cover; display: block; object-position: center center; }
 [data-panel="banheiro"] .amb-banner img { object-position: center 70%; }
+[data-panel="utilidades"] .amb-banner img { object-position: center 30%; }
 .amb-banner::after {
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(to top, rgba(43,32,24,.72) 0%, rgba(43,32,24,.18) 55%, transparent 80%);
