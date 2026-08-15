@@ -4,7 +4,7 @@ const fs   = require("fs");
 const path = require("path");
 
 const ROOT       = __dirname;
-const PORT       = 4321;
+const PORT       = process.env.PORT || 4321;
 const DB_FILE    = path.join(ROOT, "produtos.json");
 const UPLOAD_DIR = path.join(ROOT, "assets", "images", "produtos");
 

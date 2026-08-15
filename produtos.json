@@ -908,5 +908,15 @@
         "foto": "assets/images/produtos/Porta_Pepel_Hig..jpeg"
       }
     ]
+  },
+  {
+    "id": "utilidades",
+    "tab": "Utilidades",
+    "icon": "🧹",
+    "nome": "Utilidades",
+    "descricao": "Praticidade e organização para o seu dia a dia",
+    "total": 0,
+    "imagem": "assets/Imagens Ambientes/Utilidades.jpeg",
+    "produtos": []
   }
 ]

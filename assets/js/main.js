@@ -33,6 +33,12 @@
       imagem: "assets/Imagens Ambientes/Banheiro.png",
       produtos: [],
     },
+    {
+      id: "utilidades", tab: "Utilidades", icon: "🧹", nome: "Utilidades",
+      descricao: "Praticidade e organização para o seu dia a dia", total: 0,
+      imagem: "assets/Imagens Ambientes/Utilidades.jpeg",
+      produtos: [],
+    },
   ];
 
   /* ---------- Render ambientes (abas + painéis) ---------- */
@@ -82,7 +88,7 @@
             <span class="amb-badge">✦ ${a.total} produtos disponíveis</span>
           </div>
         </div>
-        <p class="amb-label">Destaques para ${a.tab === "Sala" ? "a Sala" : a.tab === "Cozinha" ? "a Cozinha" : a.tab === "Quarto" ? "o Quarto" : "o Banheiro"}</p>
+        <p class="amb-label">Destaques para ${a.tab === "Sala" ? "a Sala" : a.tab === "Cozinha" ? "a Cozinha" : a.tab === "Quarto" ? "o Quarto" : a.tab === "Banheiro" ? "o Banheiro" : "Utilidades"}</p>
         <div class="amb-grid">
           ${a.produtos
             .map(
