@@ -165,18 +165,48 @@
     });
 
     ambPanelsEl.addEventListener("click", (ev) => {
-      const btn = ev.target.closest(".amb-show-more-btn");
-      if (!btn) return;
-      const panel = btn.closest(".amb-panel");
-      const hiddenCards = [...panel.querySelectorAll(".amb-card.amb-hidden")];
-      const alreadyVisible = panel.querySelectorAll(".amb-card:not(.amb-hidden)").length;
-      hiddenCards.forEach((c, i) => {
-        c.classList.remove("amb-hidden");
-        c.classList.remove("visible");
-        void c.offsetWidth;
-        setTimeout(() => c.classList.add("visible"), i * 60);
-      });
-      btn.closest(".amb-show-more-wrap").remove();
+      // Ver todos
+      const moreBtn = ev.target.closest(".amb-show-more-btn");
+      if (moreBtn) {
+        const panel = moreBtn.closest(".amb-panel");
+        const total = panel.querySelectorAll(".amb-card").length;
+        const hiddenCards = [...panel.querySelectorAll(".amb-card.amb-hidden")];
+        hiddenCards.forEach((c, i) => {
+          c.classList.remove("amb-hidden");
+          c.classList.remove("visible");
+          void c.offsetWidth;
+          setTimeout(() => c.classList.add("visible"), i * 60);
+        });
+        const wrap = moreBtn.closest(".amb-show-more-wrap");
+        wrap.innerHTML = `
+          <button class="amb-show-less-btn" data-panel="${panel.dataset.panel}">
+            Mostrar menos
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+          </button>`;
+        return;
+      }
+
+      // Mostrar menos
+      const lessBtn = ev.target.closest(".amb-show-less-btn");
+      if (lessBtn) {
+        const panel = lessBtn.closest(".amb-panel");
+        const allCards = [...panel.querySelectorAll(".amb-card")];
+        allCards.forEach((c, i) => {
+          if (i >= INITIAL_LIMIT) {
+            c.classList.add("amb-hidden");
+            c.classList.remove("visible");
+          }
+        });
+        const wrap = lessBtn.closest(".amb-show-more-wrap");
+        wrap.innerHTML = `
+          <button class="amb-show-more-btn" data-panel="${panel.dataset.panel}">
+            Ver todos os ${allCards.length} produtos
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>`;
+        // Rola suavemente de volta ao topo da seção de ambientes
+        document.getElementById("ambientes").scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
     });
 
     // Busca de produtos
