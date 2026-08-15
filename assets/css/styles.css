@@ -394,6 +394,48 @@
 .amb-gold-line { width: 60px; height: 2px; background: var(--amb-gold); margin: 18px auto 0; }
 
 /* Abas */
+/* Barra de pesquisa */
+.amb-search-wrap {
+  position: relative; display: flex; align-items: center;
+  max-width: 460px; margin: 0 auto 28px;
+}
+.amb-search-icon {
+  position: absolute; left: 16px; width: 18px; height: 18px;
+  color: var(--amb-gold); pointer-events: none; flex-shrink: 0;
+}
+.amb-search-input {
+  width: 100%; padding: 14px 48px 14px 46px;
+  border: 1.5px solid var(--amb-border); border-radius: 999px;
+  font-size: 14px; background: var(--amb-bg); color: var(--amb-text);
+  outline: none; transition: border-color .2s, box-shadow .2s;
+  font-family: inherit;
+}
+.amb-search-input:focus {
+  border-color: var(--amb-wine);
+  box-shadow: 0 0 0 3px rgba(123,30,43,.1);
+}
+.amb-search-input::-webkit-search-cancel-button { display: none; }
+.amb-search-clear {
+  position: absolute; right: 12px; width: 30px; height: 30px;
+  border: none; background: none; cursor: pointer; color: var(--amb-text);
+  opacity: .45; display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; transition: opacity .2s, background .2s;
+}
+.amb-search-clear:hover { opacity: 1; background: var(--amb-bg-mid); }
+.amb-search-clear svg { width: 14px; height: 14px; }
+.amb-search-count {
+  text-align: center; font-size: 13px; color: var(--amb-text);
+  opacity: .6; margin-bottom: 20px; margin-top: -8px;
+}
+
+/* Estado de pesquisa ativa */
+#ambientes.searching .amb-tabs { display: none; }
+#ambientes.searching .amb-panel { display: block; animation: none; }
+#ambientes.searching .amb-banner { display: none; }
+#ambientes.searching .amb-label { display: none; }
+#ambientes.searching .amb-card { display: none; }
+#ambientes.searching .amb-card.search-match { display: block; opacity: 1; transform: none; }
+
 .amb-tabs {
   display: flex; gap: 8px; justify-content: center; overflow-x: auto;
   margin-bottom: 2.75rem; padding-bottom: 4px; -webkit-overflow-scrolling: touch; scrollbar-width: none;

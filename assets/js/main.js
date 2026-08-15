@@ -67,6 +67,13 @@
   function renderAmbientes(data) {
     if (!ambTabsEl || !ambPanelsEl) return;
 
+    // Ordena produtos de cada ambiente em ordem alfabética
+    data.forEach(a => {
+      a.produtos = [...a.produtos].sort((x, y) =>
+        x.nome.localeCompare(y.nome, 'pt-BR', { sensitivity: 'base' })
+      );
+    });
+
     ambTabsEl.innerHTML = data
       .map(
         (a, i) => `
@@ -147,6 +154,61 @@
       const btn = ev.target.closest(".amb-tab");
       if (btn) setActiveAmbTab(btn.dataset.tab);
     });
+
+    // Busca de produtos
+    const searchInput = document.getElementById("amb-search");
+    const searchClear = document.getElementById("amb-search-clear");
+    const searchCount = document.getElementById("amb-search-count");
+    const ambSectionEl = document.getElementById("ambientes");
+
+    const doSearch = (q) => {
+      const term = q.trim().toLowerCase();
+      const allCards = ambPanelsEl.querySelectorAll(".amb-card");
+
+      if (!term) {
+        ambSectionEl.classList.remove("searching");
+        allCards.forEach(c => c.classList.remove("search-match"));
+        if (searchCount) searchCount.hidden = true;
+        if (searchClear) searchClear.hidden = true;
+        ambPanelsEl.querySelectorAll(".amb-panel").forEach(p => p.style.display = "");
+        return;
+      }
+
+      ambSectionEl.classList.add("searching");
+      if (searchClear) searchClear.hidden = false;
+
+      let count = 0;
+      allCards.forEach(c => {
+        const product = JSON.parse(c.getAttribute("data-product"));
+        const match = product.nome.toLowerCase().includes(term);
+        c.classList.toggle("search-match", match);
+        if (match) count++;
+      });
+
+      // Mostra apenas painéis que têm resultado
+      ambPanelsEl.querySelectorAll(".amb-panel").forEach(p => {
+        const hasMatch = p.querySelectorAll(".amb-card.search-match").length > 0;
+        p.style.display = hasMatch ? "block" : "none";
+      });
+
+      if (searchCount) {
+        searchCount.hidden = false;
+        searchCount.textContent = count === 0
+          ? `Nenhum produto encontrado para "${q.trim()}"`
+          : `${count} produto${count !== 1 ? "s" : ""} encontrado${count !== 1 ? "s" : ""} para "${q.trim()}"`;
+      }
+    };
+
+    if (searchInput) {
+      searchInput.addEventListener("input", () => doSearch(searchInput.value));
+      if (searchClear) {
+        searchClear.addEventListener("click", () => {
+          searchInput.value = "";
+          doSearch("");
+          searchInput.focus();
+        });
+      }
+    }
 
     ambPanelsEl.addEventListener("click", (ev) => {
       const btn = ev.target.closest(".var-thumb");
