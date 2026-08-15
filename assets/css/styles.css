@@ -494,8 +494,23 @@
 }
 
 /* Grade de produtos */
-.amb-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 2rem; }
+.amb-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 1.5rem; }
 @media (min-width: 768px) { .amb-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+
+.amb-card.amb-hidden { display: none; }
+
+.amb-show-more-wrap { text-align: center; margin-bottom: 2rem; }
+.amb-show-more-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 28px; border-radius: 999px;
+  border: 1.5px solid var(--amb-wine); color: var(--amb-wine);
+  background: transparent; font-size: 14px; font-weight: 600;
+  cursor: pointer; transition: background .2s, color .2s;
+  font-family: inherit;
+}
+.amb-show-more-btn:hover { background: var(--amb-wine); color: #fff; }
+.amb-show-more-btn svg { width: 16px; height: 16px; transition: transform .2s; }
+.amb-show-more-btn:hover svg { transform: translateY(2px); }
 
 .amb-card {
   background: var(--amb-card); border-radius: 18px; overflow: hidden;

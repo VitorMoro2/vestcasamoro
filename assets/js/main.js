@@ -45,8 +45,10 @@
   const ambTabsEl   = document.getElementById("amb-tabs");
   const ambPanelsEl = document.getElementById("amb-panels");
 
+  const INITIAL_LIMIT = 6;
+
   const revealAmbCards = (panel) => {
-    panel.querySelectorAll(".amb-card").forEach((card, i) => {
+    panel.querySelectorAll(".amb-card:not(.amb-hidden)").forEach((card, i) => {
       card.classList.remove("visible");
       void card.offsetWidth;
       setTimeout(() => card.classList.add("visible"), i * 80);
@@ -131,7 +133,7 @@
                   variantes: p.variantes || []
                 });
                 return `
-                <div class="amb-card" data-product="${productData.replace(/"/g, "&quot;")}">
+                <div class="amb-card${pi >= INITIAL_LIMIT ? " amb-hidden" : ""}" data-product="${productData.replace(/"/g, "&quot;")}">
                   <div class="amb-card-media">
                     <img id="${imgId}" src="${mainSrc}" alt="${p.nome}" onerror="this.src='${FALLBACK}'" />
                     ${p.tag ? `<span class="amb-card-tag">✦ ${p.tag}</span>` : ""}
@@ -146,6 +148,13 @@
             )
             .join("")}
         </div>
+        ${a.produtos.length > INITIAL_LIMIT ? `
+        <div class="amb-show-more-wrap">
+          <button class="amb-show-more-btn" data-panel="${a.id}">
+            Ver todos os ${a.produtos.length} produtos
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </div>` : ""}
       </div>`
       )
       .join("");
@@ -153,6 +162,21 @@
     ambTabsEl.addEventListener("click", (ev) => {
       const btn = ev.target.closest(".amb-tab");
       if (btn) setActiveAmbTab(btn.dataset.tab);
+    });
+
+    ambPanelsEl.addEventListener("click", (ev) => {
+      const btn = ev.target.closest(".amb-show-more-btn");
+      if (!btn) return;
+      const panel = btn.closest(".amb-panel");
+      const hiddenCards = [...panel.querySelectorAll(".amb-card.amb-hidden")];
+      const alreadyVisible = panel.querySelectorAll(".amb-card:not(.amb-hidden)").length;
+      hiddenCards.forEach((c, i) => {
+        c.classList.remove("amb-hidden");
+        c.classList.remove("visible");
+        void c.offsetWidth;
+        setTimeout(() => c.classList.add("visible"), i * 60);
+      });
+      btn.closest(".amb-show-more-wrap").remove();
     });
 
     // Busca de produtos
