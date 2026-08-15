@@ -94,7 +94,7 @@
           <div class="amb-banner-content">
             <h3 class="amb-banner-name">${a.nome}</h3>
             <p class="amb-banner-desc">${a.descricao}</p>
-            <span class="amb-badge">✦ ${a.total} produtos disponíveis</span>
+            <span class="amb-badge">✦ ${a.produtos.length} produtos disponíveis</span>
           </div>
         </div>
         <p class="amb-label">Destaques para ${a.tab === "Sala" ? "a Sala" : a.tab === "Cozinha" ? "a Cozinha" : a.tab === "Quarto" ? "o Quarto" : a.tab === "Banheiro" ? "o Banheiro" : "Utilidades"}</p>
