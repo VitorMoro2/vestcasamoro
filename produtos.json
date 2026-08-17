@@ -917,6 +917,48 @@
         "preco": "R$ 64,00",
         "tag": "",
         "foto": "assets/images/produtos/Caixa_fita_cinza1.jpeg"
+      },
+      {
+        "nome": "Vaso Redondo Rattan 20Lts Terracota",
+        "preco": "R$ 43,85",
+        "tag": "",
+        "foto": "assets/images/produtos/Vaso_redodno_ceramica_2.jpeg"
+      },
+      {
+        "nome": "Vaso Redondo Rattan 10Lts Terracota",
+        "preco": "R$ 26,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Vaso_redodno_ceramica_2.jpeg"
+      },
+      {
+        "nome": "Vaso Redondo Rattan 20Lts Preto",
+        "preco": "R$ 35,90",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/Vaso_redodno_preto.jpeg"
+      },
+      {
+        "nome": "Vaso Redondo Rattan 10Lts Preto",
+        "preco": "R$ 20,60",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/Vaso_redodno_preto.jpeg"
+      },
+      {
+        "nome": "Vaso Quadrado Coluna Rattan 10Lts",
+        "preco": "R$ 24,00",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/Vaso_quadrado_coluna_preto.jpeg"
+      },
+      {
+        "nome": "Vaso Quadrado Coluna Rattan 17,5Lts",
+        "preco": "R$ 35,60",
+        "tag": "",
+        "foto": "assets/images/produtos/Vaso_quadrado_coluna_preto.jpeg"
+      },
+      {
+        "nome": "Vaso Quadrado Coluna Rattan 28Lts",
+        "preco": "R$ 44,80",
+        "tag": "",
+        "foto": "assets/images/produtos/Vaso_quadrado_coluna_preto.jpeg"
       }
     ]
   }
