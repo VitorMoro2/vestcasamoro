@@ -556,62 +556,6 @@
             "foto": "assets/images/produtos/Cortina_renda_uva.jpeg"
           }
         ]
-      },
-      {
-        "nome": "Cesta Organizadora Juta 5,2L",
-        "preco": "R$ 19,00",
-        "tag": "",
-        "foto": "assets/images/produtos/Cesta_Juta_berge.jpeg",
-        "variantes": [
-          {
-            "cor": "Cinza",
-            "foto": "assets/images/produtos/Cesta_Juta_cinza.jpeg"
-          },
-          {
-            "cor": "Branca",
-            "foto": "assets/images/produtos/Cesta_Juta_branca.jpeg"
-          },
-          {
-            "cor": "Rosa",
-            "foto": "assets/images/produtos/Cesta_Juta_vosa.jpeg"
-          },
-          {
-            "cor": "Preta",
-            "foto": "assets/images/produtos/Cesta_Juta_preta.jpeg"
-          },
-          {
-            "cor": "Azul Marinho",
-            "foto": "assets/images/produtos/Cesta_Juta_azul.jpeg"
-          }
-        ]
-      },
-      {
-        "nome": "Cesta Organizadora Juta 2L",
-        "preco": "R$ 11,90",
-        "tag": "",
-        "foto": "assets/images/produtos/Cesta_Juta_azul.jpeg",
-        "variantes": [
-          {
-            "cor": "Berge",
-            "foto": "assets/images/produtos/Cesta_Juta_berge.jpeg"
-          },
-          {
-            "cor": "Branca",
-            "foto": "assets/images/produtos/Cesta_Juta_branca.jpeg"
-          },
-          {
-            "cor": "Cinza",
-            "foto": "assets/images/produtos/Cesta_Juta_cinza.jpeg"
-          },
-          {
-            "cor": "Preta",
-            "foto": "assets/images/produtos/Cesta_Juta_preta.jpeg"
-          },
-          {
-            "cor": "Rosa",
-            "foto": "assets/images/produtos/Cesta_Juta_vosa.jpeg"
-          }
-        ]
       }
     ]
   },
@@ -1013,6 +957,62 @@
           {
             "cor": "Preto",
             "foto": "assets/images/produtos/Organizor_Ratan_6_div_preto.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Cesta Organizadora Juta 5,2L",
+        "preco": "R$ 19,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Cesta_Juta_berge.jpeg",
+        "variantes": [
+          {
+            "cor": "Cinza",
+            "foto": "assets/images/produtos/Cesta_Juta_cinza.jpeg"
+          },
+          {
+            "cor": "Branca",
+            "foto": "assets/images/produtos/Cesta_Juta_branca.jpeg"
+          },
+          {
+            "cor": "Rosa",
+            "foto": "assets/images/produtos/Cesta_Juta_vosa.jpeg"
+          },
+          {
+            "cor": "Preta",
+            "foto": "assets/images/produtos/Cesta_Juta_preta.jpeg"
+          },
+          {
+            "cor": "Azul Marinho",
+            "foto": "assets/images/produtos/Cesta_Juta_azul.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Cesta Organizadora Juta 2L",
+        "preco": "R$ 11,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Cesta_Juta_azul.jpeg",
+        "variantes": [
+          {
+            "cor": "Berge",
+            "foto": "assets/images/produtos/Cesta_Juta_berge.jpeg"
+          },
+          {
+            "cor": "Branca",
+            "foto": "assets/images/produtos/Cesta_Juta_branca.jpeg"
+          },
+          {
+            "cor": "Cinza",
+            "foto": "assets/images/produtos/Cesta_Juta_cinza.jpeg"
+          },
+          {
+            "cor": "Preta",
+            "foto": "assets/images/produtos/Cesta_Juta_preta.jpeg"
+          },
+          {
+            "cor": "Rosa",
+            "foto": "assets/images/produtos/Cesta_Juta_vosa.jpeg"
           }
         ]
       }
