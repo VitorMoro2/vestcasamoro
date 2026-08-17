@@ -510,34 +510,6 @@
         "foto": "assets/images/produtos/Copo_stanley_1200ml.jpeg"
       },
       {
-        "nome": "Organizador Rattan c/ 3 Divisorais",
-        "preco": "R$ 14,50",
-        "tag": "",
-        "foto": "assets/images/produtos/Organizor_Ratan_3_div_chumbo.jpeg",
-        "variantes": [
-          {
-            "cor": "Branca",
-            "foto": "assets/images/produtos/Organizor_Ratan_3_div_branco.jpeg"
-          },
-          {
-            "cor": "Preto",
-            "foto": "assets/images/produtos/Organizor_Ratan_3_div_preto.jpeg"
-          }
-        ]
-      },
-      {
-        "nome": "Organizador Rattan c/ 6 Divisorais",
-        "preco": "R$ 21,90",
-        "tag": "Mais vendido",
-        "foto": "assets/images/produtos/Organizor_Ratan_6_div_branco.jpeg",
-        "variantes": [
-          {
-            "cor": "Preto",
-            "foto": "assets/images/produtos/Organizor_Ratan_6_div_preto.jpeg"
-          }
-        ]
-      },
-      {
         "nome": "Porta Queijo Cristal",
         "preco": "R$ 24,90",
         "tag": "",
@@ -582,6 +554,62 @@
           {
             "cor": "Uva",
             "foto": "assets/images/produtos/Cortina_renda_uva.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Cesta Organizadora Juta 5,2L",
+        "preco": "R$ 19,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Cesta_Juta_berge.jpeg",
+        "variantes": [
+          {
+            "cor": "Cinza",
+            "foto": "assets/images/produtos/Cesta_Juta_cinza.jpeg"
+          },
+          {
+            "cor": "Branca",
+            "foto": "assets/images/produtos/Cesta_Juta_branca.jpeg"
+          },
+          {
+            "cor": "Rosa",
+            "foto": "assets/images/produtos/Cesta_Juta_vosa.jpeg"
+          },
+          {
+            "cor": "Preta",
+            "foto": "assets/images/produtos/Cesta_Juta_preta.jpeg"
+          },
+          {
+            "cor": "Azul Marinho",
+            "foto": "assets/images/produtos/Cesta_Juta_azul.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Cesta Organizadora Juta 2L",
+        "preco": "R$ 11,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Cesta_Juta_azul.jpeg",
+        "variantes": [
+          {
+            "cor": "Berge",
+            "foto": "assets/images/produtos/Cesta_Juta_berge.jpeg"
+          },
+          {
+            "cor": "Branca",
+            "foto": "assets/images/produtos/Cesta_Juta_branca.jpeg"
+          },
+          {
+            "cor": "Cinza",
+            "foto": "assets/images/produtos/Cesta_Juta_cinza.jpeg"
+          },
+          {
+            "cor": "Preta",
+            "foto": "assets/images/produtos/Cesta_Juta_preta.jpeg"
+          },
+          {
+            "cor": "Rosa",
+            "foto": "assets/images/produtos/Cesta_Juta_vosa.jpeg"
           }
         ]
       }
@@ -959,6 +987,34 @@
         "preco": "R$ 44,80",
         "tag": "",
         "foto": "assets/images/produtos/Vaso_quadrado_coluna_preto.jpeg"
+      },
+      {
+        "nome": "Organizador Rattan c/ 3 Divisorais",
+        "preco": "R$ 14,50",
+        "tag": "",
+        "foto": "assets/images/produtos/Organizor_Ratan_3_div_chumbo.jpeg",
+        "variantes": [
+          {
+            "cor": "Branca",
+            "foto": "assets/images/produtos/Organizor_Ratan_3_div_branco.jpeg"
+          },
+          {
+            "cor": "Preto",
+            "foto": "assets/images/produtos/Organizor_Ratan_3_div_preto.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Organizador Rattan c/ 6 Divisorais",
+        "preco": "R$ 21,90",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/Organizor_Ratan_6_div_branco.jpeg",
+        "variantes": [
+          {
+            "cor": "Preto",
+            "foto": "assets/images/produtos/Organizor_Ratan_6_div_preto.jpeg"
+          }
+        ]
       }
     ]
   }
