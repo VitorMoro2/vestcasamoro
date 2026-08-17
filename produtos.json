@@ -9,12 +9,6 @@
     "imagem": "assets/Imagens Ambientes/Sala de estar.jpeg",
     "produtos": [
       {
-        "nome": "Caixa Organizadora Telado Label Madeira 20L - 40 X 30 X 26,2 CM",
-        "preco": "R$ 49,90",
-        "tag": "Mais vendido",
-        "foto": "assets/images/produtos/Melhore_essa_imagem__mas_preciso_202605182126.jpeg"
-      },
-      {
         "nome": "Kit com dois vasos em cerâmica",
         "preco": "R$ 93,50",
         "tag": "Mais vendido",
@@ -61,12 +55,6 @@
             "foto": "assets/images/produtos/Passadeira3.jpeg"
           }
         ]
-      },
-      {
-        "nome": "Caixa Organizadora Fita Cinza - 29L - 45 X 33 X 25 CM",
-        "preco": "R$ 69,90",
-        "tag": "",
-        "foto": "assets/images/produtos/Melhore_essa_imagem__mas_n_o_202605182128.jpeg"
       },
       {
         "nome": "Tapete Listra 1,50x2,00m",
@@ -153,36 +141,6 @@
         ]
       },
       {
-        "nome": "Caixa Fita Cinza - 29L - 45 X 33 X 25 CM",
-        "preco": "R$ 69,90",
-        "tag": "",
-        "foto": "assets/images/produtos/Caixa_org._cinza.jpeg"
-      },
-      {
-        "nome": "Caixa Organizadora Rattan 07Lts.",
-        "preco": "R$ 16,50",
-        "tag": "Mais vendido",
-        "foto": "assets/images/produtos/CaixaRattan07l.jpeg"
-      },
-      {
-        "nome": "Caixa Organizadora Rattan 15Lts.",
-        "preco": "R$ 31,90",
-        "tag": "Mais vendido",
-        "foto": "assets/images/produtos/CaixaRattan15l.jpeg"
-      },
-      {
-        "nome": "Caixa Organizadora Rattan 20Lts.",
-        "preco": "R$ 37,50",
-        "tag": "Mais vendido",
-        "foto": "assets/images/produtos/CaixaRattan20.jpeg"
-      },
-      {
-        "nome": "Caixa Organizadora Rattan 40Lts.",
-        "preco": "R$ 66,50",
-        "tag": "Mais vendido",
-        "foto": "assets/images/produtos/CaixaRattan40l.jpeg"
-      },
-      {
         "nome": "Tapete Peludo 1,50x2,00m",
         "preco": "R$ 169,00",
         "tag": "Mais vendido",
@@ -205,24 +163,6 @@
             "foto": "assets/images/produtos/Tepete_peludo_1_5x2_0_preto.jpeg"
           }
         ]
-      },
-      {
-        "nome": "Caixa Telado Label Madira 08L - 29,5 X 24 X 19 CM",
-        "preco": "R$ 29,70",
-        "tag": "",
-        "foto": "assets/images/produtos/Cesta_Label_8l.jpeg"
-      },
-      {
-        "nome": "Caixa Fita Cinza - 11L - 32 X 32 X 13 CM",
-        "preco": "R$ 39,90",
-        "tag": "",
-        "foto": "assets/images/produtos/Caixa_fita_cinza1.jpeg"
-      },
-      {
-        "nome": "Caixa Fita Cinza - 15L - 45 X 33 X 13 CM",
-        "preco": "R$ 64,00",
-        "tag": "",
-        "foto": "assets/images/produtos/Caixa_fita_cinza1.jpeg"
       },
       {
         "nome": "Cortina Napoli Blackout 2,00x2,30m",
@@ -917,6 +857,67 @@
     "descricao": "Praticidade e organização para o seu dia a dia",
     "total": 0,
     "imagem": "assets/Imagens Ambientes/Utilidades.jpeg",
-    "produtos": []
+    "produtos": [
+      {
+        "nome": "Caixa Organizadora Telado Label Madeira 20L - 40 X 30 X 26,2 CM",
+        "preco": "R$ 49,90",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/Melhore_essa_imagem__mas_preciso_202605182126.jpeg"
+      },
+      {
+        "nome": "Caixa Organizadora Fita Cinza - 29L - 45 X 33 X 25 CM",
+        "preco": "R$ 69,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Melhore_essa_imagem__mas_n_o_202605182128.jpeg"
+      },
+      {
+        "nome": "Caixa Fita Cinza - 29L - 45 X 33 X 25 CM",
+        "preco": "R$ 69,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Caixa_org._cinza.jpeg"
+      },
+      {
+        "nome": "Caixa Organizadora Rattan 07Lts.",
+        "preco": "R$ 16,50",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/CaixaRattan07l.jpeg"
+      },
+      {
+        "nome": "Caixa Organizadora Rattan 15Lts.",
+        "preco": "R$ 31,90",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/CaixaRattan15l.jpeg"
+      },
+      {
+        "nome": "Caixa Organizadora Rattan 20Lts.",
+        "preco": "R$ 37,50",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/CaixaRattan20.jpeg"
+      },
+      {
+        "nome": "Caixa Organizadora Rattan 40Lts.",
+        "preco": "R$ 66,50",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/CaixaRattan40l.jpeg"
+      },
+      {
+        "nome": "Caixa Telado Label Madira 08L - 29,5 X 24 X 19 CM",
+        "preco": "R$ 29,70",
+        "tag": "",
+        "foto": "assets/images/produtos/Cesta_Label_8l.jpeg"
+      },
+      {
+        "nome": "Caixa Fita Cinza - 11L - 32 X 32 X 13 CM",
+        "preco": "R$ 39,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Caixa_fita_cinza1.jpeg"
+      },
+      {
+        "nome": "Caixa Fita Cinza - 15L - 45 X 33 X 13 CM",
+        "preco": "R$ 64,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Caixa_fita_cinza1.jpeg"
+      }
+    ]
   }
 ]
