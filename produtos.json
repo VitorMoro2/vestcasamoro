@@ -223,7 +223,21 @@
         "nome": "Caminho de Mesa Acacia 40cmx1,40m",
         "preco": "R$ 88,00",
         "tag": "",
-        "foto": "assets/images/produtos/Caminho_de_mesa_acacia_1.jpeg"
+        "foto": "assets/images/produtos/Caminho_de_mesa_acacia_2.jpeg",
+        "variantes": [
+          {
+            "cor": "Berge com cru",
+            "foto": "assets/images/produtos/Caminho_de_mesa_acacia_3.jpeg"
+          },
+          {
+            "cor": "Cru com Berge",
+            "foto": "assets/images/produtos/Caminho_de_mesa_acacia_4.jpeg"
+          },
+          {
+            "cor": "Cru com verde",
+            "foto": "assets/images/produtos/Caminho_de_mesa_acacia_1.jpeg"
+          }
+        ]
       },
       {
         "nome": "Toalha de Mesa Linhão 1,40 x 1,40m",
