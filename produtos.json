@@ -556,6 +556,34 @@
             "foto": "assets/images/produtos/Cortina_renda_uva.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Faqueiro Inox 24 pçs",
+        "preco": "R$ 159,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Jogo_de_talher_dourado.jpeg",
+        "variantes": [
+          {
+            "cor": "Prata",
+            "foto": "assets/images/produtos/Jogo_de_talher_prata.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Jogo Americano 12 peças",
+        "preco": "R$ 129,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Jogo_americano_1.jpeg",
+        "variantes": [
+          {
+            "cor": "Cinza",
+            "foto": "assets/images/produtos/Jogo_americano_3.jpeg"
+          },
+          {
+            "cor": "Mostarda",
+            "foto": "assets/images/produtos/Jogo_americano_2.jpeg"
+          }
+        ]
       }
     ]
   },
