@@ -603,13 +603,7 @@
         "nome": "Porta Xicaras para chá",
         "preco": "R$ 52,50",
         "tag": "",
-        "foto": "assets/images/produtos/WhatsApp_Image_2026-08-18_at_15.33.35.jpeg",
-        "variantes": [
-          {
-            "cor": "Inox",
-            "foto": "assets/images/produtos/Porta_Xicara.jpeg"
-          }
-        ]
+        "foto": "assets/images/produtos/Porta_Xicara.jpeg"
       },
       {
         "nome": "Tapete Xadrex 3 pçs",
