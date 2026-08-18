@@ -598,6 +598,46 @@
             "foto": "assets/images/produtos/Jogo_americano_2.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Porta Xicaras para chá",
+        "preco": "R$ 52,50",
+        "tag": "",
+        "foto": "assets/images/produtos/WhatsApp_Image_2026-08-18_at_15.33.35.jpeg",
+        "variantes": [
+          {
+            "cor": "Inox",
+            "foto": "assets/images/produtos/Porta_Xicara.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Tapete Xadrex 3 pçs",
+        "preco": "R$ 109,00",
+        "tag": "Mais vendido",
+        "foto": "assets/images/produtos/Tapete_Xadrez_3pcs4.jpeg",
+        "variantes": [
+          {
+            "cor": "Modelo1",
+            "foto": "assets/images/produtos/Tapete_Xadrez_3pcs1.jpeg"
+          },
+          {
+            "cor": "Modelo 2",
+            "foto": "assets/images/produtos/Tapete_Xadrez_3pcs2.jpeg"
+          },
+          {
+            "cor": "Modelo 3",
+            "foto": "assets/images/produtos/Tapete_Xadrez_3pcs5.jpeg"
+          },
+          {
+            "cor": "Modelo 4",
+            "foto": "assets/images/produtos/Tapete_Xadrez_3pcs6.jpeg"
+          },
+          {
+            "cor": "Modelo 5",
+            "foto": "assets/images/produtos/Tapete_Xadrez_3pcs7.jpeg"
+          }
+        ]
       }
     ]
   },
