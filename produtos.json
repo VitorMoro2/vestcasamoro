@@ -1057,6 +1057,36 @@
             "foto": "assets/images/produtos/Cesta_Juta_vosa.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Caixa Organizadoram Palha 8L",
+        "preco": "R$ 38,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Caixa_org._berge.jpeg"
+      },
+      {
+        "nome": "Caixa Organizadora Palha 29L",
+        "preco": "R$ 94,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Caixa_org._berge.jpeg"
+      },
+      {
+        "nome": "Caixa Organizadora Jutta 2 Litros",
+        "preco": "R$ 9,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Caixa_org._juta_preta.jpeg"
+      },
+      {
+        "nome": "Caixa Organizadora Jutta 6 Litros",
+        "preco": "R$ 18,50",
+        "tag": "",
+        "foto": "assets/images/produtos/Caixa_org._juta_preta.jpeg"
+      },
+      {
+        "nome": "Caixa Organizadora Jutta 16 Litros",
+        "preco": "R$ 38,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Caixa_org._juta_preta.jpeg"
       }
     ]
   }
