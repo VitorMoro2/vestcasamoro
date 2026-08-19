@@ -377,15 +377,23 @@
         "nome": "Tapete Moldura 3 pcs",
         "preco": "R$ 109,00",
         "tag": "Mais vendido",
-        "foto": "assets/images/produtos/Tapete_Moldura_3pcs2.jpeg",
+        "foto": "assets/images/produtos/Tapete_Moldura_4pcs3.jpeg",
         "variantes": [
           {
-            "cor": "Colorido",
+            "cor": "Modelo 1",
             "foto": "assets/images/produtos/Tapete_Moldura_3pcs1.jpeg"
           },
           {
-            "cor": "Marron",
+            "cor": "Modelo 2",
             "foto": "assets/images/produtos/Tapete_Moldura_3pcs3.jpeg"
+          },
+          {
+            "cor": "Modelo 3",
+            "foto": "assets/images/produtos/Tapete_Moldura_5pcs3.jpeg"
+          },
+          {
+            "cor": "Modelo 4",
+            "foto": "assets/images/produtos/Tapete_Moldura_6pcs3.jpeg"
           }
         ]
       },
