@@ -227,6 +227,18 @@
             "foto": "assets/images/produtos/Tapete_xadrez_beira_cama3.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Tapete Linha em Algodão 0,90 x 1,50m",
+        "preco": "R$ 157,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Tapete_Linha2.jpeg",
+        "variantes": [
+          {
+            "cor": "Cinza",
+            "foto": "assets/images/produtos/Tapete_linha1.jpeg"
+          }
+        ]
       }
     ]
   },
