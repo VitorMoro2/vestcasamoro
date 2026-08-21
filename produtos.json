@@ -902,6 +902,26 @@
         "preco": "R$ 69,90",
         "tag": "",
         "foto": "assets/images/produtos/Porta_Pepel_Hig..jpeg"
+      },
+      {
+        "nome": "Tapete Cairo 46x67cm",
+        "preco": "R$ 48,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Tapete_cairo_pq1.jpeg",
+        "variantes": [
+          {
+            "cor": "Modelo 2",
+            "foto": "assets/images/produtos/Tapete_cairo_pq2.jpeg"
+          },
+          {
+            "cor": "Modelo 3",
+            "foto": "assets/images/produtos/Tapete_cairo_pq3.jpeg"
+          },
+          {
+            "cor": "Modelo 4",
+            "foto": "assets/images/produtos/Tapete_cairo_pq4.jpeg"
+          }
+        ]
       }
     ]
   },
