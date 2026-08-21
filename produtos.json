@@ -195,6 +195,38 @@
             "foto": "assets/images/produtos/Cortina_napoli_-_fendi.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Tapete Rustico 0,76x1,40m",
+        "preco": "R$ 139,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Tapete_rustico_1.jpeg",
+        "variantes": [
+          {
+            "cor": "Modelo 2",
+            "foto": "assets/images/produtos/Tapete_rustico_2.jpeg"
+          },
+          {
+            "cor": "Modelo 3",
+            "foto": "assets/images/produtos/Tapete_rustico_3.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Tapete Tear Xadrez 90x1,50m",
+        "preco": "R$ 98,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Tapete_xadrez_beira_cama1.jpeg",
+        "variantes": [
+          {
+            "cor": "Modelo 2",
+            "foto": "assets/images/produtos/Tapete_xadrez_beira_cama2.jpeg"
+          },
+          {
+            "cor": "Modelo 3",
+            "foto": "assets/images/produtos/Tapete_xadrez_beira_cama3.jpeg"
+          }
+        ]
       }
     ]
   },
