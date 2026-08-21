@@ -833,6 +833,44 @@
             "foto": "assets/images/produtos/Jogo_len_ol_king_algodao_Casatex_berge.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Tapete Bordado Amarelinha 0,90x150m",
+        "preco": "R$ 219,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Tapete_amarelinha.jpeg"
+      },
+      {
+        "nome": "Tapete Infantil Desenho 0,70x1,50m",
+        "preco": "R$ 119,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Tapete_infatil_desenho.jpeg",
+        "variantes": [
+          {
+            "cor": "Verde",
+            "foto": "assets/images/produtos/Tapete_Mikey.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Tapete Linha em Algodão 0,90 x 1,50m",
+        "preco": "R$ 157,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Tapete_linha4.jpeg",
+        "variantes": [
+          {
+            "cor": "Modelo 2",
+            "foto": "assets/images/produtos/Tapete_linha5.jpeg"
+          },
+          {
+            "cor": "Modelo 3",
+            "foto": "assets/images/produtos/Tapete_linha7.jpeg"
+          },
+          {
+            "cor": "Modelo 4",
+            "foto": "assets/images/produtos/Tapete_linha6.jpeg"
+          }
+        ]
       }
     ]
   },
