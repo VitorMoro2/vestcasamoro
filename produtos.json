@@ -239,6 +239,18 @@
             "foto": "assets/images/produtos/Tapete_linha1.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Taça Diamante Ambar 260ml",
+        "preco": "R$ 94,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Ta_a_diamente_rose.jpeg"
+      },
+      {
+        "nome": "Jarra Quadrada Sllek 1,2L",
+        "preco": "R$ 23,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Jarra_Quadrada_Sllek_1_2L.jpeg"
       }
     ]
   },
@@ -1267,6 +1279,24 @@
         "preco": "R$ 48,50",
         "tag": "",
         "foto": "assets/images/produtos/Bandeja_acrilica_3.jpeg"
+      },
+      {
+        "nome": "Bomboniere 900ml Berlin",
+        "preco": "R$ 64,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Bomboniere_900ml_Berlin.jpeg"
+      },
+      {
+        "nome": "Bomboniere Milan 900ml",
+        "preco": "R$ 69,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Bomboniere_900ml_Milan.jpeg"
+      },
+      {
+        "nome": "Potiche c/ Pé Bianca Medida: 11,5x24,5cm",
+        "preco": "R$ 46,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Postiche.jpeg"
       }
     ]
   }
