@@ -1004,6 +1004,24 @@
             "foto": "assets/images/produtos/Tapete_cairo_pq4.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Bandeja Espelhada Metal, Medida: 35x12cm",
+        "preco": "R$ 48,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Bandeja_dourada_1.jpeg"
+      },
+      {
+        "nome": "Bandeja Espelhada Metal, Medida: 27x14cm",
+        "preco": "R$ 63,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Bandeja_dourada_2.jpeg"
+      },
+      {
+        "nome": "Bandeja Decorativa Espelhada em Madeira, medida 30X18cm",
+        "preco": "R$ 69,90",
+        "tag": "",
+        "foto": "assets/images/produtos/Bandeja_espelhada.jpeg"
       }
     ]
   },
