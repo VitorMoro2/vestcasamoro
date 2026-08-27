@@ -1249,6 +1249,24 @@
         "preco": "R$ 38,90",
         "tag": "",
         "foto": "assets/images/produtos/Caixa_org._juta_preta.jpeg"
+      },
+      {
+        "nome": "Bandeja Retangular com Alça Acrilico, medida 42x24,5cm",
+        "preco": "R$ 54,95",
+        "tag": "",
+        "foto": "assets/images/produtos/Bandeja_acrilica_1.jpeg",
+        "variantes": [
+          {
+            "cor": "Branca",
+            "foto": "assets/images/produtos/Bandeja_acrilica_2.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Bandeja Retangular C/ Alça 23,5x33cm em Plástico",
+        "preco": "R$ 48,50",
+        "tag": "",
+        "foto": "assets/images/produtos/Bandeja_acrilica_3.jpeg"
       }
     ]
   }
