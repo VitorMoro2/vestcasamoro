@@ -732,6 +732,26 @@
             "foto": "assets/images/produtos/Toalha_de_mesa_oxford_3_5m_2.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Toalha de Mesa Oxford 4,00 x 1,40m",
+        "preco": "R$ 83,00",
+        "tag": "Novo",
+        "foto": "assets/images/produtos/Toalha_de_mesa_oxford_4m_1.jpeg",
+        "variantes": [
+          {
+            "cor": "Modelo 2",
+            "foto": "assets/images/produtos/Toalha_de_mesa_oxford_4m_2.jpeg"
+          },
+          {
+            "cor": "Modelo 3",
+            "foto": "assets/images/produtos/Toalha_de_mesa_oxford_4m_3.jpeg"
+          },
+          {
+            "cor": "Modelo 4",
+            "foto": "assets/images/produtos/Toalha_de_mesa_oxford_4m_4.jpeg"
+          }
+        ]
       }
     ]
   },
