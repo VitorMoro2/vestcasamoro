@@ -696,6 +696,42 @@
             "foto": "assets/images/produtos/Tapete_Xadrez_3pcs7.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Toalha de Mesa Oxford 3,00 x 1,40m",
+        "preco": "R$ 64,00",
+        "tag": "Exclusivo",
+        "foto": "assets/images/produtos/Toalha_de_mesa_oxford_3m_1.jpeg",
+        "variantes": [
+          {
+            "cor": "Modelo 2",
+            "foto": "assets/images/produtos/Toalha_de_mesa_oxford_3m_2.jpeg"
+          },
+          {
+            "cor": "Modelo 3",
+            "foto": "assets/images/produtos/Toalha_de_mesa_oxford_3m_3.jpeg"
+          },
+          {
+            "cor": "Modelo 4",
+            "foto": "assets/images/produtos/Toalha_de_mesa_oxford_3m_4.jpeg"
+          },
+          {
+            "cor": "Modelo 5",
+            "foto": "assets/images/produtos/Toalha_de_mesa_oxford_3m_5.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Toalha de Mesa Oxford 3,50 x 1,40m",
+        "preco": "R$ 76,50",
+        "tag": "",
+        "foto": "assets/images/produtos/Toalha_de_mesa_oxford_3_5m_1.jpeg",
+        "variantes": [
+          {
+            "cor": "Modelo 2",
+            "foto": "assets/images/produtos/Toalha_de_mesa_oxford_3_5m_2.jpeg"
+          }
+        ]
       }
     ]
   },
