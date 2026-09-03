@@ -752,6 +752,62 @@
             "foto": "assets/images/produtos/Toalha_de_mesa_oxford_4m_4.jpeg"
           }
         ]
+      },
+      {
+        "nome": "Toalha de Mesa Oxford 2,50 x 1,40m",
+        "preco": "R$ 55,00",
+        "tag": "",
+        "foto": "assets/images/produtos/Toalha_de_mesa_oxford_2_5m_1.jpeg",
+        "variantes": [
+          {
+            "cor": "Modelo 2",
+            "foto": "assets/images/produtos/Toalha_de_mesa_oxford_2_5m_2.jpeg"
+          },
+          {
+            "cor": "Modelo 3",
+            "foto": "assets/images/produtos/Toalha_de_mesa_oxford_2_5m_3.jpeg"
+          },
+          {
+            "cor": "Modelo 4",
+            "foto": "assets/images/produtos/Toalha_de_mesa_oxford_2_5m_4.jpeg"
+          },
+          {
+            "cor": "Modelo 5",
+            "foto": "assets/images/produtos/Toalha_de_mesa_oxford_4m_1.jpeg"
+          },
+          {
+            "cor": "Modelo 6",
+            "foto": "assets/images/produtos/Toalha_de_mesa_oxford_4m_4.jpeg"
+          }
+        ]
+      },
+      {
+        "nome": "Toalha de Mesa Oxford 1,40 Redonda",
+        "preco": "R$ 35,50",
+        "tag": "",
+        "foto": "assets/images/produtos/Toalha_de_mesa_oxford_redonda_140m_1.jpeg",
+        "variantes": [
+          {
+            "cor": "Modelo 2",
+            "foto": "assets/images/produtos/Toalha_de_mesa_oxford_redonda_140m_2.jpeg"
+          },
+          {
+            "cor": "Modelo 3",
+            "foto": "assets/images/produtos/Toalha_de_mesa_oxford_redonda_140m_3.jpeg"
+          },
+          {
+            "cor": "Modelo 4",
+            "foto": "assets/images/produtos/Toalha_de_mesa_oxford_redonda_140m_6.jpeg"
+          },
+          {
+            "cor": "Modelo 5",
+            "foto": "assets/images/produtos/Toalha_de_mesa_oxford_redonda_140m_7.jpeg"
+          },
+          {
+            "cor": "Modelo 6",
+            "foto": "assets/images/produtos/Toalha_de_mesa_oxford_redonda_140m_5.jpeg"
+          }
+        ]
       }
     ]
   },
